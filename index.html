@@ -1,80 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>现代企业官网</title>
-    <link rel="stylesheet" href="style.css">
+    <title>国能热源供热有限公司</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">企业LOGO</div>
-            <ul class="nav-links">
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="container">
+            <div class="logo">
+                <img src="logo.png" alt="国能热源" class="logo-img">
+                <span>国能热源</span>
+            </div>
+            <ul class="nav-menu">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">关于我们</a></li>
-                <li><a href="#services">服务</a></li>
+                <li><a href="#technology">核心技术</a></li>
+                <li><a href="#cases">成功案例</a></li>
                 <li><a href="#contact">联系我们</a></li>
             </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>欢迎来到现代企业</h1>
-            <p>专业解决方案提供商</p>
-            <a href="#contact" class="cta-button">立即咨询</a>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <h2>关于我们</h2>
-        <div class="about-content">
-            <img src="placeholder-about.jpg" alt="公司形象">
-            <p>我们是行业领先的解决方案提供商，致力于为客户创造长期价值...</p>
-        </div>
-    </section>
-
-    <section id="services" class="services-section">
-        <h2>我们的服务</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-code"></i>
-                <h3>网站开发</h3>
-                <p>专业响应式网站开发</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>移动应用</h3>
-                <p>跨平台移动应用开发</p>
+    <!-- 首页大图 -->
+    <section class="hero" id="home">
+        <div class="hero-overlay">
+            <div class="container">
+                <h1>清洁能源供热解决方案专家</h1>
+                <p>累计供热面积超过1000万平米</p>
+                <a href="#contact" class="cta-btn">立即咨询</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <h2>联系我们</h2>
-        <div class="contact-container">
-            <form id="contactForm">
-                <input type="text" placeholder="姓名" required>
-                <input type="email" placeholder="邮箱" required>
-                <textarea placeholder="留言..." rows="5" required></textarea>
-                <button type="submit">发送</button>
-            </form>
-            <div class="contact-info">
-                <p><i class="fas fa-map-marker-alt"></i> 北京市朝阳区</p>
-                <p><i class="fas fa-phone"></i> 010-12345678</p>
-                <p><i class="fas fa-envelope"></i> contact@company.com</p>
+    <!-- 关于我们 -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="highlight">中国能源工程集团成员企业</p>
+                    <p>总部位于上海，工程技术中心位于大连，在全国设有6个省级分公司，专业从事清洁能源供热项目的投资、建设和运营。</p>
+                    <ul class="achievements">
+                        <li><i class="fas fa-check"></i> 20+ 专利技术</li>
+                        <li><i class="fas fa-check"></i> 50+ 专业工程师</li>
+                        <li><i class="fas fa-check"></i> 1000万㎡ 供热面积</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="about-img.jpg" alt="供热系统">
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 现代企业 保留所有权利</p>
+    <!-- 核心技术 -->
+    <section class="section tech" id="technology">
+        <div class="container">
+            <h2 class="section-title">核心技术</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>清洁能源技术</h3>
+                    <p>生物质能/太阳能/地热能等可再生能源应用</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-recycle"></i>
+                    <h3>余热回收技术</h3>
+                    <p>工业废热回收利用率达85%以上</p>
+                </div>
+                <!-- 添加更多技术卡片 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section class="section cases" id="cases">
+        <div class="container">
+            <h2 class="section-title">成功案例</h2>
+            <div class="case-slider">
+                <div class="case-item">
+                    <img src="case-hospital.jpg" alt="医院案例">
+                    <h4>中国医科大学附属医院</h4>
+                    <p>24小时稳定供热系统</p>
+                </div>
+                <!-- 添加更多案例 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>上海总部：上海市普陀区同普路299弄3号楼14层</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>联系电话：86-21-62689991</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>企业邮箱：sinoheat@sinoheat.cn</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="姓名" required>
+                    <input type="email" placeholder="邮箱" required>
+                    <input type="tel" placeholder="电话">
+                    <textarea rows="5" placeholder="留言内容"></textarea>
+                    <button type="submit">提交咨询</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 中机国能热源供热有限公司 沪ICP备12345678号</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
