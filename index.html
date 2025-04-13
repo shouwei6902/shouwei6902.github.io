@@ -1,154 +1,163 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>国能热源供热有限公司</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>中机企业官网</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        /* 导航栏样式 */
         .navbar {
-            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .header {
-            background: url('https://via.placeholder.com/1920x600') no-repeat center center;
-            background-size: cover;
-            height: 600px;
-            color: white;
-            text-align: center;
-            padding-top: 200px;
+
+        .logo img {
+            height: 60px;
         }
-        .header h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
+
+        .nav-items {
+            display: flex;
+            gap: 40px;
         }
-        .header p {
-            font-size: 1.5rem;
+
+        .nav-item {
+            position: relative;
+            list-style: none;
+            cursor: pointer;
         }
-        .section {
-            padding: 50px 0;
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            display: none;
+            min-width: 160px;
         }
-        .section h2 {
-            margin-bottom: 2rem;
+
+        .nav-item:hover .dropdown {
+            display: block;
         }
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
+
+        .dropdown li {
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
         }
-        .contact-info {
-            margin-top: 20px;
+
+        /* 轮播图样式 */
+        .carousel {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
         }
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
+
+        .carousel-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
+
+        .carousel-img.active {
+            display: block;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 40px;
+            cursor: pointer;
+            color: #fff;
+            background: rgba(0,0,0,0.3);
+            padding: 10px 20px;
+        }
+
+        .arrow.left { left: 20px; }
+        .arrow.right { right: 20px; }
+
+        /* 内容区域 */
+        .content {
+            padding: 50px;
+            background: #f9f9f9;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">国能热源</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">关于我们</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#trends">供热趋势</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#technology">供热技术</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cases">典型案例</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">联系我们</a>
-                    </li>
-                </ul>
-            </div>
+    <script src="script.js"></script>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="公司logo">
         </div>
+        <ul class="nav-items">
+            <li class="nav-item">关于中机
+                <ul class="dropdown">
+                    <li>公司简介</li>
+                    <li>技术优势</li>
+                    <li>对外合作</li>
+                    <li>联系我们</li>
+                </ul>
+            </li>
+            <li class="nav-item">技术路径
+                <ul class="dropdown">
+                    <li>热泵技术</li>
+                    <li>其他技术</li>
+                </ul>
+            </li>
+            <li class="nav-item">成功案例
+                <ul class="dropdown">
+                    <li>赵县项目（空气能）</li>
+                    <li>东明项目（中深层地热）</li>
+                    <li>西安理工大学高科学院（燃气）</li>
+                    <li>西安中天雅苑</li>
+                    <li>西安龙泉时代</li>
+                </ul>
+            </li>
+            <li class="nav-item">投资分析</li>
+            <li class="nav-item">合作模式</li>
+        </ul>
     </nav>
 
-    <header class="header">
-        <h1>中机国能热源供热有限公司</h1>
-        <p>致力于在全国发展清洁能源供热项目</p>
-    </header>
+    <!-- 轮播图 -->
+    <div class="carousel">
+        <img src="pic01.png" class="carousel-img active">
+        <img src="pic03.png" class="carousel-img">
+        <img src="pic02.png" class="carousel-img">
+        <div class="arrow left" onclick="changeSlide(-1)">‹</div>
+        <div class="arrow right" onclick="changeSlide(1)">›</div>
+    </div>
 
-    <section id="about" class="section bg-light">
-        <div class="container">
-            <h2>关于我们</h2>
-            <p>中机国能热源供热有限公司是中国能源工程集团有限公司的成员企业，致力于在全国发展清洁能源供热项目。公司总部位于上海，工程技术中心位于大连。</p>
-            <p>截至目前，先后成立了河北公司、河南公司、山东公司、陕西公司、辽宁公司、宁夏公司等省级公司，建成并投运多个项目，自主运营供热面积达到1000余万平。</p>
-        </div>
-    </section>
+    <!-- 内容区域 -->
+    <div class="content">
+        <h2>公司简介</h2>
+        <p>这里是公司简介内容...</p>
+    </div>
 
-    <section id="trends" class="section">
-        <div class="container">
-            <h2>供热趋势</h2>
-            <p>未来供热方式将趋向清洁环保、智能可再生能源、余热回收等。通过可再生能源技术、节能建筑技术等进一步发展，实现零碳排放供热。</p>
-        </div>
-    </section>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-img');
 
-    <section id="technology" class="section bg-light">
-        <div class="container">
-            <h2>供热技术</h2>
-            <p>国能热源在第四代供热技术、多元互补清洁能源供热、智能热网等方面具有雄厚的技术实力，拥有多项自主相关技术知识产权。</p>
-            <ul>
-                <li>第四代供热技术</li>
-                <li>零碳环保技术</li>
-                <li>智能控制系统</li>
-                <li>燃气冷凝锅炉供热技术</li>
-                <li>空气源热泵供热技术</li>
-                <li>污水源热泵供热技术</li>
-                <li>生物质供热技术</li>
-                <li>垃圾焚烧供热技术</li>
-                <li>工业余热供热技术</li>
-            </ul>
-        </div>
-    </section>
+        function changeSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
 
-    <section id="cases" class="section">
-        <div class="container">
-            <h2>典型案例</h2>
-            <p>国能热源已成功实施多个供热运营项目，包括大连中航华府小区、中国医科大学附属第四医院等。</p>
-        </div>
-    </section>
-
-    <section id="contact" class="section bg-dark text-white">
-        <div class="container">
-            <h2>联系我们</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-map-marker-alt"></i> 上海市普陀区同普路299弄3号楼14层</p>
-                <p><i class="fas fa-phone"></i> 电话：86-21-62689991</p>
-                <p><i class="fas fa-fax"></i> 传真：86-21-62689992</p>
-                <p><i class="fas fa-envelope"></i> 邮箱：sinoheat@sinoheat.cn</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2023 国能热源供热有限公司. 保留所有权利.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+        // 自动播放
+        setInterval(() => changeSlide(1), 5000);
+    </script>
 </body>
 </html>
-
