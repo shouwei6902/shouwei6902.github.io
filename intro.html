@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>企业简介</title>
+    <style>
+        .back-home-button {
+            position: absolute;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            /*left: 50%; /* 确保没有左外边距 */
+            bottom: 0; /* 确保没有左外边距 */
+            z-index: 999;
+        }
+        .back-home-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+   <!-- 导航栏-->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="公司logo">
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item">关于中机
+                <ul class="dropdown">
+                    <li><a href="intro.html">公司简介</a></li>
+                    <li><a href="intro.html">技术优势</a></li>
+                    <li><a href="intro.html">对外合作</a></li>
+                    <li><a href="intro.html">联系我们</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">产品服务
+                <ul class="dropdown">
+                    <li><a href="tech_auto.html">技术服务</a></li>
+                    <li><a href="intro.html">智慧供热产品</a></li>
+                    <li><a href="intro.html">工业节能服务</a></li>
+                    <li><a href="intro.html">项目运维服务</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">成功案例
+                <ul class="dropdown">
+                    <li><a href="intro.html">赵县项目</a></li>
+                    <li><a href="intro.html">东明项目</a></li>
+                    <li><a href="intro.html">大连邮储项目</a></li>
+                    <li><a href="intro.html">西安理工高科学院</a></li>
+                    <li><a href="intro.html">西安中天雅苑</a></li>
+                    <li><a href="intro.html">西安龙泉时代</a></li>
+                    <li><a href="intro.html">郑州翰林华府</a></li>
+                    <li><a href="intro.html">本溪华夏馨园</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="intro.html">投资分析</a></li>
+            <li class="nav-item"><a href="intro.html">合作模式</a></li>
+        </ul>
+    </nav>
+    <div class="content01">
+        <img src="images/intro01.jpg" alt="公司图片">
+        <div class="intro_text">
+            <h2>公司简介</h2>
+        </div>
+        <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
+    </div>
+   <!-- 企业简介-->
+   <div class="content">
+        <h2>企业简介</h2>
+   </div>
+   <div class="container_intro">
+       <div class="box_intro1">
+           <div class="left">
+               <p class="box_intro1-text">大连中机国能热源技术研发有限公司成立于2017年(原隶属于国能热源)，致力于以清洁能源供热为主的热力运营项目的技术研发、设计规划、投资建设、项目运营、咨询服务等。自团队成立以来已成功研发多项清洁能源供热技术，主导赵县城区、东明县城区等清洁能源城区供热规划、设计、建设、运营工作，已在供热行业形成较大的行业影响力。
+2023年，公司的发展定位从清洁供热、制冷方向向“风光储充”一体化、工业园区综合能源、工业节能等方向拓展；伴随着互联网、信息化的迅猛发展，公司提出打造“大连中机数字能源”品牌的目标，整合能源流、信息流资源，为低碳发展助力。
+国能热源将以开放、包容、共赢的发展理念，根据项目的不同情况采取提供技术产品服务、直接投资、合资合作、BOT、EMC等形式多样的运营模式，高质量、高效率拓展清洁能源市场。</p>
+           </div>
+       </div>
+       <div class="box_intro2">
+            <div class="right">
+                <img src="images/企业文化.jpg" alt="企业图片" class="box_intro2-img">
+                <p>企业文化</p>
+            </div>
+       </div>
+   </div>
+   <!-- 技术优势-->
+   <div class="content">
+       <h2>技术优势</h2>
+   </div>
+   <div class="container_tech">
+       <div class="box_tech2">
+           <div class="box_tech2_up">
+               <div class="box_tech2_up1">
+                   <img src="images/tech_1.jpg" alt="技术优势图片1" class="box_tech-img">
+                   <p>结合项目地室外逐小时温度的变化，精准模拟负荷需求并核算设备选型及投资。</p>
+               </div>
+               <div class="box_tech2_up2">
+                    <img src="images/tech_2.jpg" alt="技术优势图片2" class="box_tech-img" >
+                    <p>通过模拟软件，核算不同工艺及能源价格对成本的影响。</p>
+               </div>
+           </div>
+           <div class="box_tech2_down">
+               <div class="box_tech2_down1">
+                   <img src="images/tech_3.jpg" alt="技术优势图片3" class="box_tech-img">
+                   <p>结合供暖季日最高温度、最低温度、平均温度测算负荷需求；与实际运行提供负荷进行对比分析，考核实际运行的效果。</p>
+               </div>
+               <div class="box_tech2_down2">
+                    <img src="images/tech_4.jpg" alt="技术优势图片4" class="box_tech-img">
+                    <p>对云端智能控制平台的实时运行数据进行统计分析，发现系统运行效能低等特殊情况，对异常情况进行诊断，提出警告和处理意见。</p>
+               </div>
+           </div>
+       </div>
+       <div class="box_tech1">
+           <div class="right_up">
+               <p class="right_up-text">1、优化设计</p>
+               <p class="right_up-text">公司以“科技创新”为核心竞争力，不断学习掌握新技术并应用于实际的工作中。在赵县空气能项目设计中，从消除冷岛效应、匹配多种末端场景方面进行了优化、创新设计并取得良好效果。通过自主研发的设计模拟系统，对多能互补供热进行精算，从而达到最优投资运营效果。</p>
+               <br><br><br><br>
+           </div>
+           <div class="right_down">
+               <p class="right_down-text">2、优化运营</p>
+               <p class="right_down-text">目前，公司开发了气候补偿技术、分时控制技术、分区控制技术、动态水力平衡技术，并应用于运行。公司对运营项目的管控非常重视，对各个项目的运行数据进行数据深度挖掘；通过分析诊断，建设自主的优化模型并投入实际的检验。以赵县项目为例，通过开发优化软件，在同等室外温度情况下日耗电从106万度下降到88万度，节能达到近20%。</p>
+           </div>
+       </div>
+   </div>
+   <!-- 对外合作-->
+   <div class="content">
+       <h2>对外合作</h2>
+   </div>
+   <div class="container_cop">
+       <div class="box_cop1">
+           <p class="box_cop1-text">2018年7月9日下午，由中国国家发展和改革委员会与德国联邦经济和能源部共同主办的第九届中德经济技术合作论坛在柏林举行。总理李克强与默克尔共同出席第九届中德经济技术合作论坛并发表讲话。国能热源作为清洁供热的中方企业代表，在论坛大会上与德方合作伙伴签署清洁供热战略合作发展协议，全面开展多元清洁能源供热事业，推动可再生能源供热，响应国家节能减排号召，本着开放包容合作共赢的发展战略，引进国际最先进供热设备，以第四代供热技术及多元清洁供热技术为依托，为我国的清洁供热事业发展注入新的活力！</p>
+           <br><br><br><br>
+       </div>
+       <div class="box_cop2">
+           <div class="box_cop2_up">
+               <div class="box_cop2_up1">
+                   <img src="images/交流01.jpg" alt="技术优势图片1" class="box_cop-img">
+                   <p>国能热源受邀参加第九届中德经济技术合作论坛</p>
+               </div>
+               <div class="box_cop2_up2">
+                    <img src="images/交流02.jpg" alt="技术优势图片2" class="box_cop-img" >
+                    <p>国能热源受邀参加第九届中德经济技术合作论坛</p>
+               </div>
+           </div>
+           <div class="box_cop2_down">
+               <div class="box_cop2_down1">
+                   <img src="images/交流03.jpg" alt="技术优势图片3" class="box_cop-img">
+                    <p>国能热源同德国欧科签署合作协议</p>
+               </div>
+               <div class="box_cop2_down2">
+                    <img src="images/交流04.jpg" alt="技术优势图片4" class="box_cop-img">
+                    <p>国能热源同德国欧科签署合作协议</p>
+               </div>
+           </div>
+        </div>
+    </div>
+
+   <!-- 获奖与专利-->
+   <div class="content">
+       <h2>获奖与专利</h2>
+   </div>
+   <div class="container_patent">
+       <div class="box_patentup">
+           <div class="box_patentup_left">
+               <p class="box_patentup-text">公司获得中国节能协会节能服务产业委员会颁发的“2018年清洁供暖服务优秀企业”称号；公司投资建设运营的“西安理工高科学院供暖项目”获得2019年“中德能效合作项目奖”。</p>
+           </div>
+           <div class="box_patentup_right">
+               <img src="images/获奖01.jpg" alt="获奖图片1" class="box_patent-img">
+               <p>获奖描述</p>
+           </div>
+       </div>
+       <div class="box_patentdown">
+           <div class="box_patentdown_left">
+               <img src="images/获奖02.jpg" alt="专利图片" class="box_patent-img">
+               <p>专利情况</p>
+           </div>
+           <div class="box_patentdown_right">
+               <p class="box_patentdown-text">公司已申报多项技术专利并研发多项自主知识产权的科技成果：空气源热泵智能节能控制技术、地热资源梯级利用及尾水回灌技术、燃气冷凝锅炉与中深层地热能多能互补清洁供热技术、一种燃气锅炉节能运行系统等。</p>
+           </div>
+       </div>
+   </div>
+   <!-- 结束栏 -->
+   <div class="container_end01">
+       <div class="contact-info">
+           <h3>联系我们</h3>
+           <p>地址 辽宁省大连市甘井子区</p>
+           <p>生态科技创新城C4座5楼</p>
+           <p>电话(1)：(0411)84910777</p>
+           <p>电话(2)：(0411)84910777</p>
+           <p>Email：dltech@sinoheat.com</p>
+       </div>
+       <div class="wechat">
+           <h3>微信公众号</h3>
+           <img src="https://via.placeholder.com/150" alt="微信二维码">
+       </div>
+       <div class="system-info">
+           <h3>空气源热泵测算微信小程序</h3>
+           <img src="https://via.placeholder.com/150" alt="微信二维码">
+       </div>
+       <div class="system-info">
+           <h3>市场测算微信小程序</h3>
+           <img src="https://via.placeholder.com/150" alt="微信二维码">
+       </div>
+    </div>
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html"; // 将"index.html"替换为你的首页URL
+        }
+    </script>
+   <script src="script.js"></script>
+</body>
+</html>

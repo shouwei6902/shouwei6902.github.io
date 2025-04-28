@@ -1,163 +1,192 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>中机企业官网</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* 导航栏样式 */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo img {
-            height: 60px;
-        }
-
-        .nav-items {
-            display: flex;
-            gap: 40px;
-        }
-
-        .nav-item {
-            position: relative;
-            list-style: none;
-            cursor: pointer;
-        }
-
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: #fff;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-            display: none;
-            min-width: 160px;
-        }
-
-        .nav-item:hover .dropdown {
-            display: block;
-        }
-
-        .dropdown li {
-            padding: 10px 20px;
-            border-bottom: 1px solid #eee;
-        }
-
-        /* 轮播图样式 */
-        .carousel {
-            position: relative;
-            height: 500px;
-            overflow: hidden;
-        }
-
-        .carousel-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: none;
-        }
-
-        .carousel-img.active {
-            display: block;
-        }
-
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 40px;
-            cursor: pointer;
-            color: #fff;
-            background: rgba(0,0,0,0.3);
-            padding: 10px 20px;
-        }
-
-        .arrow.left { left: 20px; }
-        .arrow.right { right: 20px; }
-
-        /* 内容区域 */
-        .content {
-            padding: 50px;
-            background: #f9f9f9;
-        }
-    </style>
 </head>
 <body>
-    <script src="script.js"></script>
-    <!-- 导航栏 -->
+   <!-- 导航栏-->
     <nav class="navbar">
         <div class="logo">
-            <img src="logo.png" alt="公司logo">
+            <img src="images/logo.png" alt="公司logo">
         </div>
         <ul class="nav-items">
             <li class="nav-item">关于中机
                 <ul class="dropdown">
-                    <li>公司简介</li>
-                    <li>技术优势</li>
-                    <li>对外合作</li>
-                    <li>联系我们</li>
+                    <li><a href="intro.html">公司简介</a></li>
+                    <li><a href="intro.html">技术优势</a></li>
+                    <li><a href="intro.html">对外合作</a></li>
+                    <li><a href="intro.html">联系我们</a></li>
                 </ul>
             </li>
-            <li class="nav-item">技术路径
+            <li class="nav-item">产品服务
                 <ul class="dropdown">
-                    <li>热泵技术</li>
-                    <li>其他技术</li>
+                    <li><a href="tech_auto.html">技术服务</a></li>
+                    <li><a href="product.html">智慧供热产品</a></li>
+                    <li><a href="saving.html">工业节能服务</a></li>
+                    <li><a href="oam.html">项目运维服务</a></li>
                 </ul>
             </li>
             <li class="nav-item">成功案例
                 <ul class="dropdown">
-                    <li>赵县项目（空气能）</li>
-                    <li>东明项目（中深层地热）</li>
-                    <li>西安理工大学高科学院（燃气）</li>
-                    <li>西安中天雅苑</li>
-                    <li>西安龙泉时代</li>
+                    <li><a href="case.html">赵县项目</a></li>
+                    <li><a href="case.html">东明项目</a></li>
+                    <li><a href="case.html">大连邮储项目</a></li>
+                    <li><a href="case.html">西安理工高科学院</a></li>
+                    <li><a href="case.html">西安中天雅苑</a></li>
+                    <li><a href="case.html">西安龙泉时代</a></li>
+                    <li><a href="case.html">郑州翰林华府</a></li>
+                    <li><a href="case.html">本溪华夏馨园</a></li>
                 </ul>
             </li>
-            <li class="nav-item">投资分析</li>
-            <li class="nav-item">合作模式</li>
+            <li class="nav-item"><a href="intro.html">投资分析</a></li>
+            <li class="nav-item"><a href="intro.html">合作模式</a></li>
         </ul>
     </nav>
 
     <!-- 轮播图 -->
     <div class="carousel">
-        <img src="pic01.png" class="carousel-img active">
-        <img src="pic03.png" class="carousel-img">
-        <img src="pic02.png" class="carousel-img">
+        <img src="images/pic01.jpg" alt="首页轮播图1" class="carousel-img active">
+        <img src="images/pic02.jpg" alt="首页轮播图1" class="carousel-img">
+        <img src="images/pic03.jpg" alt="首页轮播图1" class="carousel-img">
         <div class="arrow left" onclick="changeSlide(-1)">‹</div>
         <div class="arrow right" onclick="changeSlide(1)">›</div>
     </div>
-
-    <!-- 内容区域 -->
+   <!-- 内容区域--“产品与服务” -->
     <div class="content">
-        <h2>公司简介</h2>
-        <p>这里是公司简介内容...</p>
+        <h2>产品服务</h2>
+    </div>
+    <div class="container_ser">
+        <div class="box">
+           <div class="interactive-area 1">
+                <p class="interactive-text01_1">技术服务</p>
+                <img src="images/tech.png" alt="示例图片" class="interactive-image01">
+                <p class="interactive-text01_2">提供供热、制冷、热水、蒸汽等项目的技术咨询服务。包括：项目的方案、可研、设计、工程管理等。</p>
+           </div>
+        </div>
+        <div class="box">
+            <div class="interactive-area 2">
+                <p class="interactive-text02_1">智慧供热产品</p>
+                <img src="images/product.png" alt="示例图片" class="interactive-image02">
+                <p class="interactive-text02_2">提供智慧供热解决方案。根据项目大小，匹配能够实现“云端智能控制”的控制箱柜；实现“气候补偿”、“分时分区”等应用。</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="interactive-area 3">
+                <p class="interactive-text03_1">工业节能服务</p>
+                <img src="images/industry.png" alt="示例图片" class="interactive-image03">
+                <p class="interactive-text03_2">提供工业领域的节能服务。包括：工业余热的热泵利用、MVR、热泵精馏、ORC、TRT、风光储充一体化等解决方案。</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="interactive-area 4">
+                <p class="interactive-text04_1">项目运维服务</p>
+                <img src="images/server.png" alt="示例图片" class="interactive-image04">
+                <p class="interactive-text04_2">为供热、制冷等能源项目提供运行、维护服务。包括“云端智能运行”服务，以及现场的设备维护、保养、修理、巡检等。</p>
+            </div>
+        </div>
     </div>
 
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-img');
+    <!-- 内容区域 -->
+    <div class="content01">
+        <img src="images/关于我们.jpg" alt="公司标志" class="about_img">
+        <div class="about_text">
+            <p>大连中机国能热源技术研发有限公司成立于2017年，致力于以清洁能源供热为主的热力运营项目的技术研发、设计规划、投资建设、项目运营、咨询服务等。自团队成立以来已成功研发多项清洁能源供热技术，主导赵县城区、东明县城区等清洁能源城区供热规划、设计、建设、运营工作，已在供热行业形成较大的行业影响力。</p>
+        </div>
+        <button type="submit" class="more-btn">MORE</button>
+       <!-- 内容区域 <button class="more-btn">MORE</button>-->
 
-        function changeSlide(n) {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + n + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
+    </div>
 
-        // 自动播放
-        setInterval(() => changeSlide(1), 5000);
-    </script>
+   <!-- 内容区域--“成功案例” -->
+    <div class="content">
+        <h2>成功案例</h2>
+    </div>
+
+    <div class="container_cases1">
+        <div class="box">
+           <div class="interactive-case 1">
+                <p class="interactive-case-text01 1">赵县项目</p>
+                <img src="images/case1.jpg" alt="示例图片" class="interactive-case-image 1">
+                <p class="interactive-case-text02 1">项目类型：大型空气能热泵供热项目</p>
+           </div>
+        </div>
+        <div class="box">
+            <div class="interactive-case 2">
+                <p class="interactive-case-text01 2">东明项目</p>
+                <img src="images/case2.jpg" alt="示例图片" class="interactive-case-image 2">
+                <p class="interactive-case-text02 2">项目类型：大型中深层+水源热泵供热项目</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="interactive-case 3">
+                <p class="interactive-case-text01 3">大连邮储项目</p>
+                <img src="images/case3.jpg" alt="示例图片" class="interactive-case-image 3">
+                <p class="interactive-case-text02 3">项目类型：分散式空气源热泵项目</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="interactive-case 4">
+                <p class="interactive-case-text01 4">西安理工高科学院</p>
+                <img src="images/case4.jpg" alt="示例图片" class="interactive-case-image 4">
+                <p class="interactive-case-text02 4">项目类型：燃气冷凝锅炉供热项目</p>
+            </div>
+        </div>
+    </div>
+    <div class="container_cases2">
+        <div class="box">
+            <div class="interactive-case 5">
+                <p class="interactive-case-text01 5">西安中天雅苑</p>
+                <img src="images/case5.jpg" alt="示例图片" class="interactive-case-image 5">
+                <p class="interactive-case-text02 5">项目类型：燃气冷凝锅炉供热项目</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="interactive-case 6">
+                <p class="interactive-case-text01 6">西安龙泉时代</p>
+                <img src="images/case6.jpg" alt="示例图片" class="interactive-case-image 6">
+                <p class="interactive-case-text02 6">项目类型：中深层水源+燃气冷凝锅炉供热项目</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="interactive-case 7">
+                <p class="interactive-case-text01 7">郑州翰林华府</p>
+                <img src="images/case7.jpg" alt="示例图片" class="interactive-case-image 7">
+                <p class="interactive-case-text02 7">项目类型：燃气冷凝锅炉供热项目</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="interactive-case 8">
+                <p class="interactive-case-text01 8">本溪华夏馨园</p>
+                <img src="images/case8.jpg" alt="示例图片" class="interactive-case-image 8">
+                <p class="interactive-case-text02 8">项目类型：燃气冷凝锅炉供热项目</p>
+            </div>
+        </div>
+    </div>
+   <!-- 结束栏 -->
+   <div class="container_end01">
+        <div class="contact-info">
+            <h3>联系我们</h3>
+            <p>地址 辽宁省大连市甘井子区</p>
+            <p>生态科技创新城C4座5楼</p>
+            <p>电话(1)：(0411)84910777</p>
+            <p>电话(2)：(0411)84910777</p>
+            <p>Email：dltech@sinoheat.com</p>
+        </div>
+        <div class="wechat">
+            <h3>微信公众号</h3>
+            <img src="https://via.placeholder.com/150" alt="微信二维码">
+        </div>
+        <div class="system-info">
+            <h3>空气源热泵测算微信小程序</h3>
+            <img src="https://via.placeholder.com/150" alt="微信二维码">
+        </div>
+        <div class="system-info">
+            <h3>市场测算微信小程序</h3>
+            <img src="https://via.placeholder.com/150" alt="微信二维码">
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

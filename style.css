@@ -1,60 +1,47 @@
-/* 基础样式 */
+/*基础样式*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Microsoft YaHei', sans-serif;
 }
 
 /* 导航栏样式 */
 .navbar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    background: #ffffff;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1000;
+    padding: 20px 50px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 999;
 }
 
 .logo img {
-    height: 65px;
-    transition: transform 0.3s ease;
+    height: 60px;
 }
 
 .nav-items {
     display: flex;
-    gap: 35px;
+    gap: 40px;
+
 }
 
 .nav-item {
     position: relative;
     list-style: none;
-    font-size: 16px;
-    color: #333;
     cursor: pointer;
-    padding: 10px 0;
-    transition: color 0.3s ease;
 }
 
-.nav-item:hover {
-    color: #007bff;
-}
-
-/* 下拉菜单样式 */
 .dropdown {
     position: absolute;
     top: 100%;
-    left: -20px;
+    left: 0;
     background: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     display: none;
-    min-width: 200px;
-    border-radius: 4px;
-    animation: slideDown 0.3s ease;
+    min-width: 160px;
 }
-
 @keyframes slideDown {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -63,71 +50,793 @@
 .nav-item:hover .dropdown {
     display: block;
 }
-
-.dropdown li {
-    padding: 12px 25px;
-    border-bottom: 1px solid #f0f0f0;
-    transition: background 0.2s ease;
+.nav-item:hover {
+    color: #f68c1c;
 }
-
+.dropdown li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+}
 .dropdown li:hover {
     background: #f8f9fa;
 }
 
 /* 轮播图样式 */
 .carousel {
-    position: relative;
-    height: 600px;
+    display: flex;
+    height: 500px;
     overflow: hidden;
-    margin-top: -1px;
+    z-index: 1;
 }
 
 .carousel-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    display: none;
 }
 
 .carousel-img.active {
-    opacity: 1;
-    z-index: 1;
+    display: block;
 }
 
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2.5rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 40px;
     cursor: pointer;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    z-index: 2;
-    transition: all 0.3s ease;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    padding: 10px 20px;
 }
 
-.arrow:hover {
-    background: rgba(0, 0, 0, 0.6);
-}
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
 
-.arrow.left { left: 30px; }
-.arrow.right { right: 30px; }
-
-/* 内容区域 */
-.content {
-    padding: 50px 10%;
+/*产品服务标题*/
+.content{
+    padding: 20px 10%;
     line-height: 1.8;
     background: #f8f9fa;
-    min-height: 400px;
+    min-height: 100px;
 }
-
 .content h2 {
     color: #2c3e50;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #007bff;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #f68c1c;
+}
+
+/*产品服务*/
+.container_ser {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px;
+    padding: 10px;
+    gap:25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*为产品服务容器设定BOX区域*/
+.box {
+    left:20px;
+    padding: 10px;
+    width: 20%;
+    margin: 25px; /* 可选，添加一些外边距以便分隔 */
+    background-color: lightblue; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+
+/*产品服务-1*/
+.interactive-area {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    margin: 15px; /* 可选，添加一些外边距以便分隔 */
+    padding: 10px;
+}
+
+.interactive-image01 {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.interactive-text01_1 {
+    width: 300px;
+    font-size: 18px; /* 文字大小 */
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.interactive-text01_2 {
+    font-size: 14px; /* 文字大小 */
+    width: 300px;
+    color: black;
+    transition: color 0.3s ease;
+    margin-top: 20px;
+}
+
+.interactive-area:hover .interactive-image01 {
+    transform: scale(1.1);
+}
+
+.interactive-area:hover .interactive-text01_1 {
+    color: #f68c1c;
+}
+
+.interactive-area:hover .interactive-text01_2 {
+    color: #f68c1c;
+}
+/*产品服务-2*/
+.interactive-image02 {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.interactive-text02_1 {
+    font-size: 18px; /* 文字大小 */
+    width: 300px;
+    z-index: 1;
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.interactive-text02_2 {
+    font-size: 14px; /* 文字大小 */
+    width: 300px;
+    z-index: 2;
+    color: black;
+    transition: color 0.3s ease;
+    margin-top: 20px;
+}
+
+.interactive-area:hover .interactive-image02 {
+    transform: scale(1.1);
+}
+
+.interactive-area:hover .interactive-text02_1 {
+    color: #f68c1c;
+}
+
+.interactive-area:hover .interactive-text02_2 {
+    color: #f68c1c;
+}
+/*产品服务-3*/
+.interactive-image03 {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.interactive-text03_1 {
+    font-size: 18px; /* 文字大小 */
+    width: 300px;
+    z-index: 1;
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.interactive-text03_2 {
+    font-size: 14px; /* 文字大小 */
+    width: 300px;
+    z-index: 2;
+    color: black;
+    transition: color 0.3s ease;
+    margin-top: 20px;
+}
+
+.interactive-area:hover .interactive-image03 {
+    transform: scale(1.1);
+}
+
+.interactive-area:hover .interactive-text03_1 {
+    color: #f68c1c;
+}
+
+.interactive-area:hover .interactive-text03_2 {
+    color: #f68c1c;
+}
+/*产品服务-4*/
+.interactive-image04 {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.interactive-text04_1 {
+    font-size: 18px; /* 文字大小 */
+    width: 300px;
+    z-index: 1;
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.interactive-text04_2 {
+    font-size: 14px; /* 文字大小 */
+    width: 300px;
+    z-index: 2;
+    color: black;
+    transition: color 0.3s ease;
+    margin-top: 20px;
+}
+
+.interactive-area:hover .interactive-image04 {
+    transform: scale(1.1);
+}
+
+.interactive-area:hover .interactive-text04_1 {
+    color: #f68c1c;
+}
+
+.interactive-area:hover .interactive-text04_2 {
+    color: #f68c1c;
+}
+
+/*about as*/
+.content01 {
+    position: relative;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.content01 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 或者使用 contain, fill, none 等 */
+}
+
+.about_text {
+    position: absolute; /* 或者使用相对定位，取决于具体布局需求 */
+    display: flex;
+    color: white; /* 文字颜色 */
+    font-size: 28px; /* 文字大小 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px; /* 根据需要调整 */
+    height: 300px; /* 根据需要调整 */
+    z-index: 1;
+}
+
+.more-btn {
+    position: absolute;
+    display: flex;
+    left: 50%; /* 向右偏移50px */
+    top: 70%; /* 向下偏移20px */
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background: #f0ad4e;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.3s;
+    z-index: 2;
+}
+
+.more-btn:hover {
+    background: #ec971f;
+}
+
+/*成功案例*/
+.container_cases1 {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px;
+    padding: 10px;
+    gap:25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container_cases2 {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px;
+    padding: 10px;
+    gap:25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*成功案例-1*/
+.interactive-case {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    margin: 15px; /* 可选，添加一些外边距以便分隔 */
+    padding: 10px;
+}
+
+.interactive-case-image {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.interactive-case-text01 {
+    width: 300px;
+    font-size: 18px; /* 文字大小 */
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.interactive-case-text02 {
+    font-size: 14px; /* 文字大小 */
+    width: 300px;
+    color: black;
+    transition: color 0.3s ease;
+    margin-top: 20px;
+}
+
+.interactive-case:hover .interactive-case-image {
+    transform: scale(1.1);
+}
+
+.interactive-case:hover .interactive-case-text01 {
+    color: #f68c1c;
+}
+
+.interactive-case:hover .interactive-case-text02 {
+    color: #f68c1c;
+}
+
+/*网站尾部*/
+.container_end01 {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-info, .wechat, .system-info {
+    text-align: left;
+}
+.contact-info p, .wechat p, .system-info p {
+    margin: 5px 0;
+}
+.contact-info p::before, .wechat p::before {
+    content: " ";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    background-color: #e74c3c;
+}
+.system-info a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+.system-info a:hover {
+    text-decoration: underline;
+}
+.wechat img {
+    width: 150px;
+    height: 150px;
+}
+
+/*介绍页-公司介绍*/
+.content01 {
+    display: flex;
+    overflow: hidden;
+    z-index: 1;
+}
+.content01 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.intro_text {
+    position: absolute; /* 或者使用相对定位，取决于具体布局需求
+    /*display: flex;*/
+    color: white; /* 文字颜色 */
+    font-size: 28px; /* 文字大小 */
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px; /* 根据需要调整 */
+    height: 300px; /* 根据需要调整 */
+    z-index: 2;
+}
+/*返回首页按钮*/
+.container_intro {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px;
+    padding: 10px;
+    gap:25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.box_intro1 {
+    left:5px;
+    padding: 5px;
+    width: 50%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_intro2 {
+    left:5px;
+    padding: 5px;
+    width: 30%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+
+.box_intro2.right {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    margin: 15px; /* 可选，添加一些外边距以便分隔 */
+    padding: 10px;
+}
+
+.box_intro2-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.box_intro1-text {
+    width: 100%;
+    font-size: 24px; /* 文字大小 */
+    text-align: left;
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/*介绍页-技术优势*/
+.container_tech {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px;
+    padding: 10px;
+    gap:25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box_tech1 {
+    display: flex;
+    flex-direction: column;
+    left:5px;
+    padding: 5px;
+    width: 35%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+
+.right_up{
+    left:5px;
+    padding: 5px;
+    width: 100%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.right_down{
+    left:5px;
+    padding: 5px;
+    width: 100%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.right_up-text {
+    width: 100%;
+    font-size: 24px; /* 文字大小 */
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+    text-align: left; /* 可选，使内容在 div 中居中 */
+}
+.right_down-text {
+    width: 100%;
+    font-size: 24px; /* 文字大小 */
+    text-align: left;
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+.box_tech2 {
+    display: flex;
+    flex-direction: column; /* 水平排列子元素 */
+    left:5px;
+    padding: 5px;
+    width: 35%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_tech2_up {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    left:5px;
+    padding: 5px;
+    width: 100%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_tech2_up1 {
+    left:5px;
+    padding: 5px;
+    width: 50%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_tech2_up2 {
+    left:5px;
+    padding: 5px;
+    width: 50%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_tech2_down {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    left:5px;
+    padding: 5px;
+    width: 100%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_tech2_down1 {
+    left:5px;
+    padding: 5px;
+    width: 50%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_tech2_down2 {
+    left:5px;
+    padding: 5px;
+    width: 50%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+
+.box_tech-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/*介绍页-合作交流*/
+.container_cop {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px;
+    padding: 10px;
+    gap:25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box_cop1 {
+    left:5px;
+    padding: 5px;
+    width: 35%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_cop1-text {
+    width: 100%;
+    font-size: 24px; /* 文字大小 */
+    line-height: 48px;
+    text-align: left;
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+.box_cop2 {
+    display: flex;
+    flex-direction: column; /* 水平排列子元素 */
+    left:5px;
+    padding: 5px;
+    width: 35%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_cop2_up {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    left:5px;
+    padding: 5px;
+    width: 100%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_cop2_up1 {
+    left:5px;
+    padding: 5px;
+    width: 50%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_cop2_up2 {
+    left:5px;
+    padding: 5px;
+    width: 50%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_cop2_down {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    left:5px;
+    padding: 5px;
+    width: 100%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_cop2_down1 {
+    left:5px;
+    padding: 5px;
+    width: 50%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_cop2_down2 {
+    left:5px;
+    padding: 5px;
+    width: 50%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+
+.box_cop-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/*介绍页-获奖专利*/
+.container_patent {
+    display: flex;
+    flex-direction: column; /* 水平排列子元素 */
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px;
+    padding: 10px;
+    gap:25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box_patentup {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    left:5px;
+    padding: 5px;
+    width: 70%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_patentdown {
+    display: flex;
+    flex-direction: row; /* 水平排列子元素 */
+    left:5px;
+    padding: 5px;
+    width: 70%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_patentup_left{
+    left:5px;
+    padding: 5px;
+    width: 35%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_patentup_right{
+    left:5px;
+    padding: 5px;
+    width: 35%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_patentdown_left{
+    left:5px;
+    padding: 5px;
+    width: 35%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_patentdown_right{
+    left:5px;
+    padding: 5px;
+    width: 35%;
+    margin: 5px; /* 可选，添加一些外边距以便分隔 */
+    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
+    text-align: center; /* 可选，使内容在 div 中居中 */
+}
+.box_patentup-text {
+    font-size: 24px; /* 文字大小 */
+    text-align: left;
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+.box_patentdown-text {
+    font-size: 24px; /* 文字大小 */
+    text-align: left;
+    color: black;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+.box_patent-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+/*返回首页按钮*/
+.back-home-button {
+    position: absolute;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 50%; /* 确保没有左外边距 */
+}
+.back-home-button:hover {
+    background-color: #0056b3;
 }

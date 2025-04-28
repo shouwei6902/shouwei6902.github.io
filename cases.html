@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #1a5276;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #1a5276;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a5276;
+        }
+
+        h3 {
+            color: #2874a6;
+            margin: 20px 0 10px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            flex-basis: calc(50% - 15px);
+            background-color: #eaf2f8;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .feature-box {
+                flex-basis: 100%;
+            }
+        }
+        /*网站尾部*/
+        .container_end01 {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .contact-info, .wechat, .system-info {
+            text-align: left;
+        }
+        .contact-info p, .wechat p, .system-info p {
+            margin: 5px 0;
+        }
+        .contact-info p::before, .wechat p::before {
+            content: " ";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            background-color: #e74c3c;
+        }
+        .system-info a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        .system-info a:hover {
+            text-decoration: underline;
+        }
+        .wechat img {
+            width: 150px;
+            height: 150px;
+        }
+        /*插入并排图*/
+        .pic-box {
+            display: flex;
+            flex-direction: row; /* 水平排列子元素 */
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            background: rgba(255, 255, 255, 0.9);
+            gap:25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /*为产品服务容器设定BOX区域*/
+        .pic-style {
+            width: 50%;
+            background-color: lightblue; /* 可选，设置背景颜色以便查看效果 */
+            text-align: center; /* 可选，使内容在 div 中居中 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>智慧供热案例介绍</h1>
+        </header>
+        <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">1、河北赵县项目</h2>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/fensan.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目特性：</h3>
+                    <p><u>项目位置：</u>河北省石家庄市赵县城区</p>
+                    <p><u>技术路线：</u>分布式空气源热泵供热系统</p>
+                    <p><u>项目性质：</u>城镇级热力改造项目</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use01.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">基本情况:</h3>
+                    <p>城镇供热项目，供热面积400万平米，覆盖整个赵县县城城区，采暖季四个月。居民采暖费18.5元/平，非居民采暖费31元/平，入网配套费95元/平，政府供热补贴每年10元/平，补贴年限15年。项目投资改造费用约2.6亿元。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/see.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目背景：</h3>
+                    <p>赵县原有供热系统以热电厂蒸汽余热作为热源，因“2+26”城市环保政策将关停小型电厂，面临热源缺失风险，且赵县原有热力集中供热管网老旧，小马拉大车、泡冒滴漏等问题严重。由大连技术公司设计、改造，国能热源赵县分公司承接后续运营工作。采用分布式空气源热泵供热系统，在城区建设36个分布式空气源热源站。 </p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/report.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">运营效果：</h3>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">系统运行稳定，已稳定运行 5 个采暖季；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">供热效果良好，居民室内温度可达到21~24℃；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">经济效益好，年均运营收益5元/㎡，项目回收期5~6 年</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">清洁环保，无污染物排放。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/zhaoxian01.jpg" alt="product" class="pic-style">
+                <img src="images/zhaoxian02.jpg" alt="product" class="pic-style">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">2、山东东明项目</h2>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/fensan.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目特性：</h3>
+                    <p><u>项目位置：</u>山东省菏泽市东明县城区</p>
+                    <p><u>技术路线：</u>中深层地热梯级供热系统</p>
+                    <p><u>项目性质：</u>城镇级热力改造项目</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use01.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">基本情况:</h3>
+                    <p>城镇供热项目，一期老旧改造供热面积40万平米，新建供热面积50万平，二期老旧改造120万平，新建供热面积240万平，合计450万平，其中一期正在建设，部分区域投产，二期还在规划阶段。采暖季四个月，居民采暖费22元/平，非居民采暖费30元/平，入网配套费40元/平。项目截止目前投资约3500万元。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/see.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目背景：</h3>
+                    <p>东明县有丰富的地热资源，现有小区采用打1600米深的中深层地热井，抽取地下水进行供热，但没有做回灌，导致每年冬天有大量的地下水外排，不仅影响地下水位同时污染市政排水管，东明县政府推动对老旧小区地下水回灌改造，新建建筑也必须实现地下水回灌。由大连技术公司设计、改造，国能热源东明县分公司承接后续运营工作。采用地下水梯级利用供热系统+100%尾水回灌技术。 </p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/report.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">运营效果：</h3>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">系统运行稳定，已稳定运行 5 个采暖季；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">供热效果良好，居民室内温度可达到 22~24℃；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">经济效益好，年均运营收益超过 12 元/㎡；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">清洁环保，100%尾水回灌。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/dongming01.jpg" alt="product" class="pic-style">
+                <img src="images/dongming02.jpg" alt="product" class="pic-style">
+            </div>
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">3、大连邮储项目</h2>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/fensan.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目特性：</h3>
+                    <p><u>项目位置：</u>大连市及所属区市县</p>
+                    <p><u>技术路线：</u>分散式空气源热泵供热系统</p>
+                    <p><u>项目性质：</u>分散式煤改电项目</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use01.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">基本情况:</h3>
+                    <p>鉴于大连邮储系统冬季采暖点多面光的问题，我们打造了适合分散式、小型化的“云智控”运营平台。通过云平台，采用气候补偿技术、分时控制技术（休息时段采取防冻运行）、分区控制（住宿区24小时供热）等对分散站点实现集中云平台管控。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/see.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目背景：</h3>
+                    <p>大连市邮储系统在大连市以及周边地区共有服务站点近百个。除去城市内可以接驳集中供热的站点外，有将近60个站点的冬季供暖只能采取散煤小锅炉模式。由于站点面积都比较小，采暖锅炉系统简陋，造成耗煤大、污染重、成本高、存在安全隐患等问题。 </p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/report.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">运营效果：</h3>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">试点项目已运行2个采暖季，系统运行稳定；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">供热效果好，室内控制21℃，上下不差1℃；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">经济效益好，低于改造前燃煤方式成本；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">清洁环保，无污染物排放。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/youzheng01.jpg" alt="product" class="pic-style">
+                <img src="images/youzheng02.jpg" alt="product" class="pic-style">
+            </div>
+        </div>
+
+                <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">4、西安理工大学高科学院项目</h2>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/fensan.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目特性：</h3>
+                    <p><u>项目位置：</u>陕西省西安市西咸新区</p>
+                    <p><u>技术路线：</u>天然气冷凝锅炉供热系统</p>
+                    <p><u>项目性质：</u>单体学校新建项目</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use01.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">基本情况:</h3>
+                    <p>学校供热项目，总体供热面积 45 万平米，采暖季两个半月；采暖费 14.5 元/平；配套费40 元/平。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/see.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目背景：</h3>
+                    <p>大学教学楼及宿舍供热，总体供热面积 45 万平米，采暖季四个月。全为新建建筑，使用天然气冷凝锅炉进行供热。由大连技术公司设计、建设，国能热源陕西分公司承接后续运营工作。 </p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/report.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">运营效果：</h3>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">系统运行稳定，已稳定运行 6 个采暖季；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">供热效果良好，室内温度可达到 21~22℃；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">经济效益好，新建建筑收取供热配套费，配套费收入超过项目投资，无项目回收期。年运行收益超过3元/㎡。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/ligong01.jpg" alt="product" class="pic-style">
+                <img src="images/ligong02.jpg" alt="product" class="pic-style">
+            </div>
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">5、西安中天雅苑项目</h2>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/fensan.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目特性：</h3>
+                    <p><u>项目位置：</u>陕西省西安市城区</p>
+                    <p><u>技术路线：</u>天然气冷凝锅炉供热系统</p>
+                    <p><u>项目性质：</u>单体居民小区热力改造项目</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use01.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">基本情况:</h3>
+                    <p>居民小区供热项目，总体供热面积 10 万平米，采暖季四个月。居民采暖费 21.2 元/平。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/see.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目背景：</h3>
+                    <p>2018年西安市开始进行燃气锅炉氮氧化物30mg排放改造，该小区原使用燃气锅炉氮氧化物不达标。由大连技术公司设计、改造，国能热源陕西分公司承接后续运营工作。采用天然气冷凝锅炉供热系统替换原有天然气普通锅炉供热系统。 </p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/report.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">运营效果：</h3>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">系统运行稳定，已稳定运行 6 个采暖季；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">供热效果良好，居民室内温度可达到 21~23℃；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">经济效益好，年均运营收益7 元/㎡，项目回收期在 3~4 年；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">环保达标，低氮排放。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/zhongtian01.jpg" alt="product" class="pic-style">
+                <img src="images/zhongtian02.jpg" alt="product" class="pic-style">
+            </div>
+        </div>
+
+                <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">6、西安龙泉时代项目</h2>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/fensan.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目特性：</h3>
+                    <p><u>项目位置：</u>陕西省西安市西咸新区</p>
+                    <p><u>技术路线：</u>天然气冷凝锅炉+中深层地热多元混合供热系统</p>
+                    <p><u>项目性质：</u>单体居民小区热力改造项目</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use01.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">基本情况:</h3>
+                    <p>居民小区供热项目，总体供热面积 15 万平米，采暖季四个月。采暖费 21.2 元/平。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/see.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目背景：</h3>
+                    <p>原有中深层地热供热系统热负荷不足，添加天然气冷凝锅炉进行调峰补热。由大连技术公司设计、改造，国能热源陕西分公司承接后续运营工作。采用天然气冷凝锅炉搭配原有中深层地热的多元清洁供热系统。 </p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/report.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">运营效果：</h3>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">系统运行稳定，已稳定运行 6 个采暖季；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">供热效果良好，居民室内温度可达到 22~23℃；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">经济效益好，年均运营收益9元/㎡，项目回收期约 3 年。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/longquan01.jpg" alt="product" class="pic-style">
+                <img src="images/longquan02.jpg" alt="product" class="pic-style">
+            </div>
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">7、郑州翰林华府项目</h2>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/fensan.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目特性：</h3>
+                    <p><u>项目位置：</u>河南省郑州市城区</p>
+                    <p><u>技术路线：</u>天然气冷凝锅炉供热系统</p>
+                    <p><u>项目性质：</u>单体居民小区新建项目</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use01.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">基本情况:</h3>
+                    <p>住宅小区供热，总体供热面积 20 万平米，2018 年新建小区，采暖季四个月。采暖费 20.52 元/平。配套费 49.2 元/平。由大连技术公司设计、建设，国能热源河南分公司承接后续运营工作。采用天然气冷凝锅炉供热系统。 </p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/see.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目背景：</h3>
+                    <p>该项目属于新建居民小区，需要建设集中供热系统。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/report.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">运营效果：</h3>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">系统运行稳定，已稳定运行 6 个采暖季；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">供热效果良好，居民室内温度可达到 21~22℃；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">经济效益好，新建建筑收取供热配套费，配套费收入超过项目投资，无项目回收期。</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">环保达标，低氮排放。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/zhengzhou01.jpg" alt="product" class="pic-style">
+                <img src="images/zhengzhou02.jpg" alt="product" class="pic-style">
+            </div>
+        </div>
+
+                <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">8、本溪华夏馨园项目</h2>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/fensan.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目特性：</h3>
+                    <p><u>项目位置：</u>辽宁省本溪市城区</p>
+                    <p><u>技术路线：</u>天然气冷凝锅炉供热系统</p>
+                    <p><u>项目性质：</u>单体居民小区热力新建项目</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use01.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">基本情况:</h3>
+                    <p>住宅小区供热，总体供热面积 8 万平米，2018 年新建小区，采暖季五个月。采暖费 26 元/平；配套费 40 元/平。由大连技术公司设计、建设，国能热源本溪分公司承接后续运营工作，采用天然气冷凝锅炉供热系统。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/see.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">项目背景：</h3>
+                    <p>该项目属于新建居民小区，需要建设集中供热系统。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/report.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">运营效果：</h3>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">系统运行稳定，已稳定运行 6 个采暖季；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">供热效果良好，居民室内温度可达到 22~23℃；</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">经济效益好，新建建筑收取供热配套费，配套费收入超过项目投资，无项目回收期。</p>
+                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">环保达标，低氮排放。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/huaxia01.jpg" alt="product" class="pic-style">
+                <img src="images/huaxia02.jpg" alt="product" class="pic-style">
+            </div>
+        </div>
+        <!-- 结束栏 -->
+        <div class="container_end01">
+           <div class="contact-info">
+               <h3>联系我们</h3>
+               <p>地址 辽宁省大连市甘井子区</p>
+               <p>生态科技创新城C4座5楼</p>
+               <p>电话(1)：(0411)84910777</p>
+               <p>电话(2)：(0411)84910777</p>
+               <p>Email：dltech@sinoheat.com</p>
+           </div>
+           <div class="wechat">
+               <h3>微信公众号</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+           <div class="system-info">
+               <h3>空气源热泵测算微信小程序</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+           <div class="system-info">
+               <h3>市场测算微信小程序</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+        </div>
+        <div class="container_end01">
+            <footer>
+                &copy; 2023 大连中机国能热源技术研发有限公司 | 版权所有
+            </footer>
+        </div>
+    </div>
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html"; // 将"index.html"替换为你的首页URL
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

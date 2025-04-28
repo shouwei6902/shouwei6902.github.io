@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧供热产品介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #1a5276;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #1a5276;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a5276;
+        }
+
+        h3 {
+            color: #2874a6;
+            margin: 20px 0 10px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+/*
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+*/
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            flex-basis: calc(50% - 15px);
+            background-color: #eaf2f8;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .feature-box {
+                flex-basis: 100%;
+            }
+        }
+        /*网站尾部*/
+        .container_end01 {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .contact-info, .wechat, .system-info {
+            text-align: left;
+        }
+        .contact-info p, .wechat p, .system-info p {
+            margin: 5px 0;
+        }
+        .contact-info p::before, .wechat p::before {
+            content: " ";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            background-color: #e74c3c;
+        }
+        .system-info a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        .system-info a:hover {
+            text-decoration: underline;
+        }
+        .wechat img {
+            width: 150px;
+            height: 150px;
+        }
+        /*插入并排图*/
+        .pic-box {
+            display: flex;
+            flex-direction: row; /* 水平排列子元素 */
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            background: rgba(255, 255, 255, 0.9);
+            gap:25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /*为产品服务容器设定BOX区域*/
+        .pic-style {
+            width: 50%;
+            background-color: lightblue; /* 可选，设置背景颜色以便查看效果 */
+            text-align: center; /* 可选，使内容在 div 中居中 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>智慧供热产品介绍</h1>
+            <p>专业提供气候补偿、分时分区、水力平衡等“云平台”解决方案</p>
+        </header>
+        <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
+
+        <div class="section">
+            <h2>智慧供热产品概述</h2>
+            <p>随着我国供热行业向智能化、低碳化发展转型，智慧供热成为提升供热效率、降低能耗和改善用户满意度的重要手段。本介绍材料将详细介绍适用于不同规模供热场景的智慧供热产品，包括大型区域性供热的PLC及二网智能变频调控柜、分散式小规模供热的控制箱，以及用于智能调整一、二网水力平衡的阀门和控制系统。</p>
+        </div>
+
+        <div class="section">
+            <!--<h2>一、大型区域性供热PLC及二网智能变频调控柜</h2>-->
+            <h2><img src="icon/PLC.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">一、大型区域性供热PLC及二网智能变频调控柜</h2>
+
+            <p>针对大型区域性供热系统，我们提供基于PLC（可编程逻辑控制器）和二网智能变频调控柜的解决方案。该系统通过物联网、云计算和大数据技术，实现气候补偿、分时分区控制等功能，从而优化供热运行效率。</p>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/temp.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">气候补偿与分时分区控制</h3>
+                    <p>系统能够根据实时气象数据和用户需求，动态调整供热参数，实现精准供热。例如，通过AI算法预测热需，结合历史数据和天气预报，优化热源负荷分配，确保供热稳定性和节能效果。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/time.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">二网智能变频调控</h3>
+                    <p>采用变频技术对二次网循环泵进行控制，根据实际需求调整运行频率，减少无效能耗。例如，某项目通过远程调控循环泵频率，实现了全年节电约100万度，节约成本达50万元。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/icloud.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">云端平台管理</h3>
+                    <p>所有设备通过WiFi或4G网络连接至智慧供热云平台，实现远程监控、数据分析和故障诊断。例如，"sino_heat"智慧供热云平台支持全网数据采集与处理，提供可视化决策支持。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use01.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">应用场景</h3>
+                    <p>适用于大型公共建筑群、工业园区等集中供热场景，能够显著提升供热系统的智能化水平和运行效率。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/PLC01.png" alt="product" class="pic-style">
+                <img src="images/controller01.png" alt="product" class="pic-style">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><img src="icon/fensan.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">二、分散式小规模供热控制箱</h2>
+            <p>针对分散式小规模供热需求，我们推出小型化、模块化的控制箱产品，支持气候补偿和分时分区控制功能。</p>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/temp.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">气候补偿功能</h3>
+                    <p>控制箱内置高精度传感器，实时监测室内外温度，并根据设定参数自动调节供热流量，确保室内温度恒定。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/time.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">分时分区控制</h3>
+                    <p>用户可通过手机APP或本地触摸屏设置分时分区供热模式，灵活满足不同区域或时间段的供热需求。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/wifi.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">无线通信与云端集成</h3>
+                    <p>控制箱支持WiFi或4G通信方式，可接入智慧供热云平台，实现远程监控和数据上传。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use02.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">应用场景</h3>
+                    <p>适用于住宅小区、小型商业建筑等分散式供热场景，便于安装且操作简便。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/controller_box1.png" alt="product" class="pic-style">
+                <img src="images/controller02.png" alt="product" class="pic-style">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><img src="icon/water.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">三、智能调整一、二网水力平衡的阀门和控制系统</h2>
+            <p>为解决传统供热系统中一、二网水力失衡问题，我们研发了智能阀门和控制系统。</p>
+            <div class="features">
+                <div class="feature-box">
+                    <h3><img src="icon/valve_icon.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">智能平衡阀</h3>
+                    <p>配备物联网功能，实时监测并调节供回水温度和流量，确保一、二网水力平衡。例如，某项目通过智能平衡阀实现了二次网温度均衡，解决了末端温度偏低的问题。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/AI.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">AI调控算法</h3>
+                    <p>系统采用AI算法分析热负荷需求，动态调整阀门开度，优化热网运行效率。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/see.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">可视化决策支持</h3>
+                    <p>智能阀门与云平台联动，提供可视化决策支持，帮助用户快速响应系统变化。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3><img src="icon/use03.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">应用场景</h3>
+                    <p>适用于各类供热系统的一、二网水力平衡调节，尤其适合老旧管网改造和新建项目的优化升级。</p>
+                </div>
+            </div>
+            <div class="pic-box">
+                <img src="images/valve01.png" alt="product" class="pic-style">
+                <img src="images/valve02.png" alt="product" class="pic-style">
+            </div>
+        </div>
+
+        <!-- 结束栏 -->
+        <div class="container_end01">
+           <div class="contact-info">
+               <h3>联系我们</h3>
+               <p>地址 辽宁省大连市甘井子区</p>
+               <p>生态科技创新城C4座5楼</p>
+               <p>电话(1)：(0411)84910777</p>
+               <p>电话(2)：(0411)84910777</p>
+               <p>Email：dltech@sinoheat.com</p>
+           </div>
+           <div class="wechat">
+               <h3>微信公众号</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+           <div class="system-info">
+               <h3>空气源热泵测算微信小程序</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+           <div class="system-info">
+               <h3>市场测算微信小程序</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+        </div>
+        <div class="container_end01">
+            <footer>
+                &copy; 2023 大连中机国能热源技术研发有限公司 | 版权所有
+            </footer>
+        </div>
+    </div>
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html"; // 将"index.html"替换为你的首页URL
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

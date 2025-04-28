@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>供热企业技术服务</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #1a5276;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #1a5276;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a5276;
+        }
+
+        h3 {
+            color: #2874a6;
+            margin: 20px 0 10px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            flex-basis: calc(50% - 15px);
+            background-color: #eaf2f8;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1a5276;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .contact {
+            background-color: #eaf2f8;
+            padding: 25px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .feature-box {
+                flex-basis: 100%;
+            }
+        }
+        /*网站尾部*/
+        .container_end01 {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .contact-info, .wechat, .system-info {
+            text-align: left;
+        }
+        .contact-info p, .wechat p, .system-info p {
+            margin: 5px 0;
+        }
+        .contact-info p::before, .wechat p::before {
+            content: " ";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            background-color: #e74c3c;
+        }
+        .system-info a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        .system-info a:hover {
+            text-decoration: underline;
+        }
+        .wechat img {
+            width: 150px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>供热企业技术服务</h1>
+            <p>专业提供供热、制冷、热水、蒸汽等项目的全方位技术解决方案</p>
+        </header>
+        <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
+
+        <div class="section">
+            <h2>一、技术服务内容概述</h2>
+            <p>我公司专注于供热、制冷、热水及蒸汽等项目的全面技术咨询服务，涵盖从项目规划、可行性研究、方案设计到施工管理及后期运营维护的全过程。</p>
+
+            <h3>1. 项目方案设计与可行性研究</h3>
+            <ul>
+                <li>提供供热、制冷、热水及蒸汽项目的整体方案设计，包括热源选择、供热管网布局、设备选型等</li>
+                <li>进行详细的可行性研究，包括市场分析、技术方案、经济效益评估及环境影响分析</li>
+            </ul>
+
+            <h3>2. 工程设计与施工管理</h3>
+            <ul>
+                <li>根据客户需求制定供热系统的具体设计方案</li>
+                <li>提供供热工程设计、施工及安装服务</li>
+                <li>在施工过程中严格控制施工质量</li>
+            </ul>
+
+            <h3>3. 智能化与节能技术应用</h3>
+            <ul>
+                <li>引入智能化供热技术，如实时监控、智能控制和故障诊断</li>
+                <li>提供节能技术解决方案，包括热能回收、高效锅炉技术等</li>
+            </ul>
+
+            <h3>4. 工程管理与运行维护</h3>
+            <ul>
+                <li>提供工程全过程管理</li>
+                <li>在供热系统运行阶段提供运行维护服务</li>
+            </ul>
+
+            <h3>5. 客户服务与技术支持</h3>
+            <ul>
+                <li>提供供热知识培训及技术支持</li>
+                <li>提供"一站式"服务解决方案</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>二、服务特色</h2>
+            <div class="features">
+                <div class="feature-box">
+                    <h3>全面覆盖</h3>
+                    <p>从项目前期规划到后期维护，提供一站式服务，满足不同客户的多样化需求。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3>技术先进</h3>
+                    <p>采用智能化、节能化技术，提升供热系统的效率和可靠性，降低运营成本。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3>专业团队</h3>
+                    <p>拥有经验丰富的技术专家团队，涵盖多个专业领域。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3>高效服务</h3>
+                    <p>通过实时监控和数据分析，快速响应客户需求。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>三、服务范围</h2>
+            <ul>
+                <li><strong>供热项目</strong>：包括集中供热、区域供热、工业蒸汽供热等</li>
+                <li><strong>制冷项目</strong>：提供中央空调、热泵系统等制冷设备的设计安装</li>
+                <li><strong>热水及蒸汽项目</strong>：提供热水供应、蒸汽发生及管网设计服务</li>
+            </ul>
+            <h3>典型案例展示</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>项目名称</th>
+                        <th>项目类型</th>
+                        <th>服务内容</th>
+                        <th>经济效益</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>全县域空气能供热项目</td>
+                        <td>集中供热</td>
+                        <td>智能化系统优化设计</td>
+                        <td>效率提升20%</td>
+                    </tr>
+                    <tr>
+                        <td>中深层热泵供热项目</td>
+                        <td>地热能</td>
+                        <td>多能互补技术应用</td>
+                        <td>能耗降低30%</td>
+                    </tr>
+                    <tr>
+                        <td>分散式点供项目</td>
+                        <td>分散式供热</td>
+                        <td>云平台运维</td>
+                        <td>运行成本降低30%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 结束栏 -->
+        <div class="container_end01">
+           <div class="contact-info">
+               <h3>联系我们</h3>
+               <p>地址 辽宁省大连市甘井子区</p>
+               <p>生态科技创新城C4座5楼</p>
+               <p>电话(1)：(0411)84910777</p>
+               <p>电话(2)：(0411)84910777</p>
+               <p>Email：dltech@sinoheat.com</p>
+           </div>
+           <div class="wechat">
+               <h3>微信公众号</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+           <div class="system-info">
+               <h3>空气源热泵测算微信小程序</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+           <div class="system-info">
+               <h3>市场测算微信小程序</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+        </div>
+        <div class="container_end01">
+            <footer>
+                &copy; 2023 大连中机国能热源技术研发有限公司 | 版权所有
+            </footer>
+        </div>
+    </div>
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html"; // 将"index.html"替换为你的首页URL
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

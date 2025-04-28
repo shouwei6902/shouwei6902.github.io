@@ -1,0 +1,22 @@
+.interactive-area {
+    text-align: center;
+}
+
+.interactive-image {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.interactive-text {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.interactive-area:hover .interactive-image {
+    transform: scale(1.2);
+}
+
+.interactive-area:hover .interactive-text {
+    color: red;
+}

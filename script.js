@@ -18,8 +18,27 @@ carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
 carousel.addEventListener('mouseleave', () => {
     autoPlay = setInterval(() => changeSlide(1), 5000);
 });
+//产品与服务
+// 监听整个文档的右键点击事件
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault(); // 阻止默认的右键菜单
+    window.location.href = "https://www.example.com"; // 跳转到指定网页
+});
+
+
+//about as
+document.addEventListener('DOMContentLoaded', function() {
+    const moreBtn = document.querySelector('.more-btn');
+    moreBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        // Add your logic here for the "MORE" button click
+        alert('More information will be displayed here!');
+    });
+});
+
 
 // 导航栏交互
+
 document.querySelectorAll('.dropdown li').forEach(item => {
     item.addEventListener('click', function() {
         // 根据点击的菜单项更新内容区域
@@ -30,6 +49,14 @@ document.querySelectorAll('.dropdown li').forEach(item => {
             <p>${contentTitle}的详细内容...</p>
         `;
     });
+});
+// 获取下拉菜单元素
+const selector = document.getElementById('.dropdown li');
+selector.addEventListener('change', function () {
+    const url = this.value;
+    if (url) {
+        window.location.href = url;
+    }
 });
 
 // 页面加载后初始化
@@ -49,3 +76,4 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
