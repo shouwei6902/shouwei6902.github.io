@@ -121,57 +121,7 @@
                 flex-basis: 100%;
             }
         }
-        /*网站尾部*/
-        .container_end01 {
-            background-color: #34495e;
-            color: #ecf0f1;
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .contact-info, .wechat, .system-info {
-            text-align: left;
-        }
-        .contact-info p, .wechat p, .system-info p {
-            margin: 5px 0;
-        }
-        .contact-info p::before, .wechat p::before {
-            content: " ";
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            margin-right: 5px;
-            background-color: #e74c3c;
-        }
-        .system-info a {
-            color: #ecf0f1;
-            text-decoration: none;
-        }
-        .system-info a:hover {
-            text-decoration: underline;
-        }
-        .wechat img {
-            width: 150px;
-            height: 150px;
-        }
-        /*返回首页按钮*/
-        .back-home-button {
-            position: absolute;
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: left;
-            margin-left: 50%; /* 确保没有左外边距 */
-        }
-        .back-home-button:hover {
-            background-color: #0056b3;
-        }
+
     </style>
 </head>
 <body>
@@ -179,11 +129,11 @@
         <header>
             <h1>供热企业技术服务</h1>
             <p>专业提供供热、制冷、热水、蒸汽等项目的全方位技术解决方案</p>
+            <br>
+            <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
         </header>
-        <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
-
         <div class="section">
-            <h2>一、技术服务内容概述</h2>
+            <h2 id="tech_1">一、技术服务内容概述</h2>
             <p>我公司专注于供热、制冷、热水及蒸汽等项目的全面技术咨询服务，涵盖从项目规划、可行性研究、方案设计到施工管理及后期运营维护的全过程。</p>
 
             <h3>1. 项目方案设计与可行性研究</h3>

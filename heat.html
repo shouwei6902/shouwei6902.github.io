@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #1a5276;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #1a5276;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a5276;
+        }
+
+        h3 {
+            color: #2874a6;
+            margin: 20px 0 10px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            flex-basis: calc(50% - 15px);
+            background-color: #eaf2f8;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .feature-box {
+                flex-basis: 100%;
+            }
+        }
+
+        /*插入并排图*/
+        .pic-box {
+            display: flex;
+            flex-direction: row; /* 水平排列子元素 */
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            background: rgba(255, 255, 255, 0.9);
+            gap:25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /*为产品服务容器设定BOX区域*/
+        .pic-style {
+            width: 50%;
+            background-color: lightblue; /* 可选，设置背景颜色以便查看效果 */
+            text-align: center; /* 可选，使内容在 div 中居中 */
+        }
+        .pic-style01 {
+            width: 100%;
+            background-color: lightblue; /* 可选，设置背景颜色以便查看效果 */
+            text-align: center; /* 可选，使内容在 div 中居中 */
+        }
+        .text-box{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            background: rgb(25, 72, 189);
+            gap:25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .text-box01{
+            display: flex;
+            flex-basis: calc(48% - 15px);
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+          margin: 1vw;
+            background: rgb(25, 72, 189);
+            gap:25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>供热技术介绍</h1>
+            <br>
+            <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
+        </header>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_1">1、未来供热发展趋势</h2>
+            <div class="pic-box">
+                <img src="images/tech01.jpg" alt="product" class="pic-style">
+                <img src="images/tech02.jpg" alt="product" class="pic-style">
+            </div>
+            <div class="pic-box">
+                <img src="images/tech03.jpg" alt="product" class="pic-style">
+                <img src="images/tech04.jpg" alt="product" class="pic-style">
+            </div>
+            <div class="text-box">
+                <p style="color: white; margin: 0.8vw" >综上所述，供热技术的不断升级进步，旨在提高机组设备的发热效率和热转换效率，提高可再生能源利用率，减少对生态环境的污染和人体健康的影响。未来供热将会利用更多可再生能源，进一步减少化石燃料的使用，余热回收、多元供热、智能控制等是供热行业的发展趋势，实现零碳排放供热甚至负碳排放供热的目标。</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_2">2、第四代供热技术</h2>
+            <div class="pic-box">
+                <img src="images/tech05.jpg" alt="product" class="pic-style">
+                <img src="images/tech06.jpg" alt="product" class="pic-style">
+            </div>
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_3">3、智能热源技术</h2>
+            <img src="images/tech17.jpg" alt="product" class="pic-style01">
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_4">4、智能热网技术</h2>
+            <div class="pic-box">
+                <img src="images/tech07.jpg" alt="product" class="pic-style">
+                <p style="font-size: 1.25vw; line-height:2.5vw; margin: 1.25vw">MCEP多元集中能源平台，是国能热源自主知识产权技术，是面向未来的第四代供热技术。左图为MCEP多元集中能源平台供热示意图，整个供热区域由多元清洁能源和可再生能源为主，传统化石能源供热为辅，综合供给热能。系统结合光热供热、干热岩供热、污水源热泵供热、水源热泵供热、垃圾焚烧厂余热回收、燃气热电联供、谷电蓄热、大型蓄能基地及智能供热管网，形成一个互动有机的整体。
+MCEP多元集中能源平台重视整合所有可用能源，继续从各种来源中集成更多可再生能源和余热资源、能量存储以及供需之间的动态互动进一步确保了该系统的灵活性和高效性。既适用于新建供热系统，也适用于对现有供热系统的改造与扩建。
+从能源使用角度来说可再生资源的使用比例开始迅速扩张。可再生资源使用的增加是为了满足政府规定要求的减碳目标。因为只有不再扩建任何基于化石燃料的热源，减碳的目标才能够实现。工业的余热利用和热电联产，也是大力推广的方向，进而将垃圾焚烧、热电联产作为基础热源、锅炉房作为调峰热源的大型复杂联合供热系统，多个热源配合使用，低品位能源提供基础负荷，高品位能源负责调峰负荷。一般供暖初期或供暖期结束前，供暖需求较少，只运行基础热源，减少了运行设备，降低了运行成本。因此多热源联合运行具有节能、高效、供热保障率高的优点。
+最终建立热力市场自由化：统一的热力交易市场，通过国能热源实现多元热源之间的热力交互，形成稳定的热力交易市场，丰富整个供热管网供给的同时，增强了供热能力的可靠性，提高了整体能源的利用率，避免了余热的浪费。热力市场的建立会进一步统一供热市场，提高能效利用，减少碳排放。
+</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="tech" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_5">5、二网与末端控制</h2>
+            <img src="images/tech08.jpg" alt="tech" class="pic-style01">
+            <div class="features">
+                <div class="text-box01">
+                    <p style="color: white; margin: 0.8vw;font-size: 0.85vw" >供热系统中的水力不平衡现象较为严重，水力不平衡是造成供热能耗浪费的主要原因之一。水力失调分为静态失调和动态失调。静态失调是由于某些环路存在剩余压头，即某些环路的阻力过小时，这些环路的实际流量超过设计流量，由于总流量一定，则其他部分达不到设定流量，出现冷热不均；在动态系统中，当某些环路的水量发生变化时，会引起系统的压力分布发生变化，从而干扰其他环路，使其他环路发生本不应有的变化。国能热源水力平衡系统中使用平衡阀、混水器、自动控制系统来解决动态和静态失调的问题，保证用户舒适供热温度，消除供热失调问题。</p>
+                </div>
+                <div class="text-box01">
+                    <p style="color: white; margin: 0.8vw; font-size: 0.85vw" >对每一位供热用户进行精确控制，通过检测供热管网供回水温度、压力、流量、流速等参数，对末端用户进行精确控制，在满足供热需求的前提下，最大化的节省供热运营成本，做到按需供热。整套设备精密可靠，通过对终端用户的准确控制，为用户提供更好的供热体验，可以根据用户自身需求，制定个性化供热方案， 分时段供热，供热温度等需求全部可由供热用户自己把握。 操控合理，更加高效、人性化。</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="tech" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_6">6、燃气冷凝锅炉供热</h2>
+            <img src="images/tech09.jpg" alt="tech" class="pic-style01">
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="tech" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_7">7、空气源与污水源供热</h2>
+            <img src="images/tech10.jpg" alt="tech" class="pic-style01">
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="tech" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_8">8、浅层地热与海水源供热</h2>
+            <img src="images/tech11.jpg" alt="tech" class="pic-style01">
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="tech" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_9">9、地热与干热岩供热</h2>
+            <img src="images/tech12.jpg" alt="tech" class="pic-style01">
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="tech" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_10">10、电蓄热与光热供热</h2>
+            <img src="images/tech13.jpg" alt="tech" class="pic-style01">
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="tech" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_11">11、生物质供热</h2>
+            <img src="images/tech14.jpg" alt="tech" class="pic-style01">
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="tech" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_12">12、垃圾处理供热</h2>
+            <img src="images/tech15.jpg" alt="tech" class="pic-style01">
+        </div>
+        <div class="section">
+            <h2><img src="icon/case.png" alt="tech" style="width:32px; vertical-align: middle; margin-right: 5px;" id="tech_13">13、工业余热与季节储能</h2>
+            <img src="images/tech16.jpg" alt="tech" class="pic-style01">
+        </div>
+
+        <!-- 结束栏 -->
+        <div class="container_end01">
+           <div class="contact-info">
+               <h3>联系我们</h3>
+               <p>地址 辽宁省大连市甘井子区</p>
+               <p>生态科技创新城C4座5楼</p>
+               <p>电话(1)：(0411)84910777</p>
+               <p>电话(2)：(0411)84910777</p>
+               <p>Email：dltech@sinoheat.com</p>
+           </div>
+           <div class="wechat">
+               <h3>微信公众号</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+           <div class="system-info">
+               <h3>空气源热泵测算微信小程序</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+           <div class="system-info">
+               <h3>市场测算微信小程序</h3>
+               <img src="https://via.placeholder.com/150" alt="微信二维码">
+           </div>
+        </div>
+        <div class="container_end01">
+            <footer>
+                &copy; 2023 大连中机国能热源技术研发有限公司 | 版权所有
+            </footer>
+        </div>
+    </div>
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html"; // 将"index.html"替换为你的首页URL
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

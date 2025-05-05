@@ -5,28 +5,169 @@
     <link rel="stylesheet" href="style.css">
     <title>企业简介</title>
     <style>
-        .back-home-button {
-            position: absolute;
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        /*介绍页-公司介绍*/
+        .content01 {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            overflow: hidden;
+            z-index: 1;
+        }
+        .content01 img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .intro_text {
+            position: absolute; /* 或者使用相对定位，取决于具体布局需求*/
+            color: white; /* 文字颜色 */
+            font-size: 1.4vw; /* 文字大小 */
+            transform: translate(-50%, -50%);
+            left:50%;
+            top: 50%;
+            width: 40%; /* 根据需要调整 */
+            height: 20%; /* 根据需要调整 */
+            z-index: 666;
+        }
+
+        /*简介图片与文字*/
+        .container_intro {
+            position: relative;
+            display: flex;
+            width: 100%;
+            flex-direction: row; /* 水平排列子元素 */
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            background: rgb(239, 238, 238);
+            margin: 0.5rem;
+            padding: 0.5rem;
+            gap:25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .box_intro1 {
+            left:5px;
+            padding: 5px;
+            width: 50%;
+            margin: 5px; /* 可选，添加一些外边距以便分隔 */
+            background-color: #efeeee; /* 可选，设置背景颜色以便查看效果 */
+            text-align: center; /* 可选，使内容在 div 中居中 */
+        }
+        .box_intro2 {
+            left:5px;
+            padding: 5px;
+            width: 30%;
+            margin: 5px; /* 可选，添加一些外边距以便分隔 */
+            background-color: #efeeee; /* 可选，设置背景颜色以便查看效果 */
+            text-align: center; /* 可选，使内容在 div 中居中 */
+        }
+
+        .box_intro2.right {
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* 垂直排列子元素 */
+            margin: 15px; /* 可选，添加一些外边距以便分隔 */
+            padding: 10px;
+        }
+
+        .box_intro2-img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .box_intro1-text {
+            width: 100%;
+            font-size: 1.25vw; /* 文字大小 */
+            line-height: 2.5vw;
             text-align: left;
-            /*left: 50%; /* 确保没有左外边距 */
-            bottom: 0; /* 确保没有左外边距 */
-            z-index: 999;
+            color: black;
+            transition: color 0.3s ease;
+            margin-bottom: 1.2rem;
         }
-        .back-home-button:hover {
-            background-color: #0056b3;
+
+        /*介绍页-技术优势*/
+        .container {
+            position: relative;
+            display: flex;
+            width: 100%;
+            flex-direction: column; /* 水平排列子元素 */
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            background: rgb(239, 238, 238);
+            margin: 0.5rem;
+            padding: 0.5rem;
+            gap:25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
+        .box_tech{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            gap:25px;
+            left:5px;
+            padding: 5px;
+            width: 100%;
+            margin: 5px; /* 可选，添加一些外边距以便分隔 */
+            background-color: #efeeee; /* 可选，设置背景颜色以便查看效果 */
+            text-align: center; /* 可选，使内容在 div 中居中 */
+        }
+        .box_tech_image{
+            left:5px;
+            padding: 5px;
+            width: 17%;
+            margin: 5px; /* 可选，添加一些外边距以便分隔 */
+            background-color: #efeeee; /* 可选，设置背景颜色以便查看效果 */
+            text-align: center; /* 可选，使内容在 div 中居中 */
+        }
+        .box_tech_text{
+            width: 40%;
+            line-height: 2.5vw;
+            color: black;
+            transition: color 0.3s ease;
+            margin-bottom: 1.2rem;
+            text-align: left; /* 可选，使内容在 div 中居中 */
+        }
+
+        .box_tech-img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        /*介绍页-获奖专利*/
+        .box_patent_image{
+            left:5px;
+            padding: 5px;
+            width: 40%;
+            margin: 5px; /* 可选，添加一些外边距以便分隔 */
+            background-color: #efeeee; /* 可选，设置背景颜色以便查看效果 */
+            text-align: center; /* 可选，使内容在 div 中居中 */
+        }
+        .box_patent_text{
+            left:5px;
+            padding: 5px;
+            line-height: 2.5vw;
+            width: 35%;
+            margin: 5px; /* 可选，添加一些外边距以便分隔 */
+            background-color: #efeeee; /* 可选，设置背景颜色以便查看效果 */
+            text-align: center; /* 可选，使内容在 div 中居中 */
+        }
+
+        .box_patent-img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
     </style>
+
 </head>
 <body>
-
    <!-- 导航栏-->
     <nav class="navbar">
         <div class="logo">
@@ -35,34 +176,50 @@
         <ul class="nav-items">
             <li class="nav-item">关于中机
                 <ul class="dropdown">
-                    <li><a href="intro.html">公司简介</a></li>
-                    <li><a href="intro.html">技术优势</a></li>
-                    <li><a href="intro.html">对外合作</a></li>
-                    <li><a href="intro.html">联系我们</a></li>
+                    <li><a href="intro.html#intro_1">公司简介</a></li>
+                    <li><a href="intro.html#intro_2">技术优势</a></li>
+                    <li><a href="intro.html#intro_3">对外合作</a></li>
+                    <li><a href="intro.html#intro_4">获奖与专利</a></li>
+                    <li><a href="intro.html#intro_5">联系我们</a></li>
                 </ul>
             </li>
             <li class="nav-item">产品服务
                 <ul class="dropdown">
                     <li><a href="tech_auto.html">技术服务</a></li>
-                    <li><a href="intro.html">智慧供热产品</a></li>
-                    <li><a href="intro.html">工业节能服务</a></li>
-                    <li><a href="intro.html">项目运维服务</a></li>
+                    <li><a href="product.html">智慧供热产品</a></li>
+                    <li><a href="saving.html">工业节能服务</a></li>
+                    <li><a href="oam.html">项目运维服务</a></li>
                 </ul>
             </li>
             <li class="nav-item">成功案例
                 <ul class="dropdown">
-                    <li><a href="intro.html">赵县项目</a></li>
-                    <li><a href="intro.html">东明项目</a></li>
-                    <li><a href="intro.html">大连邮储项目</a></li>
-                    <li><a href="intro.html">西安理工高科学院</a></li>
-                    <li><a href="intro.html">西安中天雅苑</a></li>
-                    <li><a href="intro.html">西安龙泉时代</a></li>
-                    <li><a href="intro.html">郑州翰林华府</a></li>
-                    <li><a href="intro.html">本溪华夏馨园</a></li>
+                    <li><a href="cases.html#case_1">赵县项目</a></li>
+                    <li><a href="cases.html#case_2">东明项目</a></li>
+                    <li><a href="cases.html#case_3">大连邮储项目</a></li>
+                    <li><a href="cases.html#case_4">西安理工高科学院</a></li>
+                    <li><a href="cases.html#case_5">西安中天雅苑</a></li>
+                    <li><a href="cases.html#case_6">西安龙泉时代</a></li>
+                    <li><a href="cases.html#case_7">郑州翰林华府</a></li>
+                    <li><a href="cases.html#case_8">本溪华夏馨园</a></li>
                 </ul>
             </li>
-            <li class="nav-item"><a href="intro.html">投资分析</a></li>
-            <li class="nav-item"><a href="intro.html">合作模式</a></li>
+            <li class="nav-item">供热技术
+                <ul class="dropdown">
+                    <li><a href="heat.html#tech_1">未来供热发展趋势</a></li>
+                    <li><a href="heat.html#tech_2">第四代供热技术</a></li>
+                    <li><a href="heat.html#tech_3">智能热源技术</a></li>
+                    <li><a href="heat.html#tech_4">智能热网技术</a></li>
+                    <li><a href="heat.html#tech_5">二网与末端控制</a></li>
+                    <li><a href="heat.html#tech_6">燃气冷凝锅炉供热</a></li>
+                    <li><a href="heat.html#tech_7">空气源与污水源</a></li>
+                    <li><a href="heat.html#tech_8">浅层地热与海水源</a></li>
+                    <li><a href="heat.html#tech_9">地热与干热岩</a></li>
+                    <li><a href="heat.html#tech_10">电蓄热与光热供热</a></li>
+                    <li><a href="heat.html#tech_11">生物质供热</a></li>
+                    <li><a href="heat.html#tech_12">垃圾处理供热</a></li>
+                    <li><a href="heat.html#tech_13">工业余热与季节储能</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <div class="content01">
@@ -70,11 +227,11 @@
         <div class="intro_text">
             <h2>公司简介</h2>
         </div>
-        <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
+        <button style="position: absolute" class="back-home-button" onclick="goToHomePage()">返回首页</button>
     </div>
    <!-- 企业简介-->
    <div class="content">
-        <h2>企业简介</h2>
+        <h2 id="intro_1">企业简介</h2>
    </div>
    <div class="container_intro">
        <div class="box_intro1">
@@ -87,110 +244,105 @@
        <div class="box_intro2">
             <div class="right">
                 <img src="images/企业文化.jpg" alt="企业图片" class="box_intro2-img">
-                <p>企业文化</p>
+                <p style="font-size: 0.83vw;">企业文化</p>
             </div>
        </div>
    </div>
    <!-- 技术优势-->
    <div class="content">
-       <h2>技术优势</h2>
+       <h2 id="intro_2">技术优势</h2>
    </div>
-   <div class="container_tech">
-       <div class="box_tech2">
-           <div class="box_tech2_up">
-               <div class="box_tech2_up1">
-                   <img src="images/tech_1.jpg" alt="技术优势图片1" class="box_tech-img">
-                   <p>结合项目地室外逐小时温度的变化，精准模拟负荷需求并核算设备选型及投资。</p>
-               </div>
-               <div class="box_tech2_up2">
-                    <img src="images/tech_2.jpg" alt="技术优势图片2" class="box_tech-img" >
-                    <p>通过模拟软件，核算不同工艺及能源价格对成本的影响。</p>
-               </div>
+   <div class="container 1">
+       <div class="box_tech 1">
+           <div class="box_tech_image 1">
+               <img src="images/tech_1.jpg" alt="技术优势图片1" class="box_tech-img">
+               <p style="font-size: 0.83vw">结合项目地室外逐小时温度的变化，精准模拟负荷需求并核算设备选型及投资。</p>
            </div>
-           <div class="box_tech2_down">
-               <div class="box_tech2_down1">
-                   <img src="images/tech_3.jpg" alt="技术优势图片3" class="box_tech-img">
-                   <p>结合供暖季日最高温度、最低温度、平均温度测算负荷需求；与实际运行提供负荷进行对比分析，考核实际运行的效果。</p>
-               </div>
-               <div class="box_tech2_down2">
-                    <img src="images/tech_4.jpg" alt="技术优势图片4" class="box_tech-img">
-                    <p>对云端智能控制平台的实时运行数据进行统计分析，发现系统运行效能低等特殊情况，对异常情况进行诊断，提出警告和处理意见。</p>
-               </div>
+           <div class="box_tech_image 2">
+                <img src="images/tech_2.jpg" alt="技术优势图片2" class="box_tech-img" >
+                <p style="font-size: 0.83vw">通过模拟软件，核算不同工艺及能源价格对成本的影响。</p>
            </div>
+           <div class="box_tech_text 1">
+               <p style="font-size: 1.25vw">1、优化设计</p>
+               <p style="font-size: 1.25vw">公司以“科技创新”为核心竞争力，不断学习掌握新技术并应用于实际的工作中。在赵县空气能项目设计中，从消除冷岛效应、匹配多种末端场景方面进行了优化、创新设计并取得良好效果。通过自主研发的设计模拟系统，对多能互补供热进行精算，从而达到最优投资运营效果。</p>
+            </div>
        </div>
-       <div class="box_tech1">
-           <div class="right_up">
-               <p class="right_up-text">1、优化设计</p>
-               <p class="right_up-text">公司以“科技创新”为核心竞争力，不断学习掌握新技术并应用于实际的工作中。在赵县空气能项目设计中，从消除冷岛效应、匹配多种末端场景方面进行了优化、创新设计并取得良好效果。通过自主研发的设计模拟系统，对多能互补供热进行精算，从而达到最优投资运营效果。</p>
-               <br><br><br><br>
+       <div class="box_tech 2">
+           <div class="box_tech_text 1">
+               <p style="font-size: 1.25vw">2、优化运营</p>
+               <p style="font-size: 1.25vw">目前，公司开发了气候补偿技术、分时控制技术、分区控制技术、动态水力平衡技术，并应用于运行。公司对运营项目的管控非常重视，对各个项目的运行数据进行数据深度挖掘；通过分析诊断，建设自主的优化模型并投入实际的检验。以赵县项目为例，通过开发优化软件，在同等室外温度情况下日耗电从106万度下降到88万度，节能达到近20%。</p>
            </div>
-           <div class="right_down">
-               <p class="right_down-text">2、优化运营</p>
-               <p class="right_down-text">目前，公司开发了气候补偿技术、分时控制技术、分区控制技术、动态水力平衡技术，并应用于运行。公司对运营项目的管控非常重视，对各个项目的运行数据进行数据深度挖掘；通过分析诊断，建设自主的优化模型并投入实际的检验。以赵县项目为例，通过开发优化软件，在同等室外温度情况下日耗电从106万度下降到88万度，节能达到近20%。</p>
+           <div class="box_tech_image 1">
+               <img src="images/tech_3.jpg" alt="技术优势图片3" class="box_tech-img">
+               <p style="font-size: 0.83vw">结合供暖季日最高温度、最低温度、平均温度测算负荷需求；与实际运行提供负荷进行对比分析，考核实际运行的效果。</p>
+           </div>
+           <div class="box_tech_image 2">
+                <img src="images/tech_4.jpg" alt="技术优势图片4" class="box_tech-img">
+                <p style="font-size: 0.83vw">对云端智能控制平台的实时运行数据进行统计分析，发现系统运行效能低等特殊情况，对异常情况进行诊断，提出警告和处理意见。</p>
            </div>
        </div>
    </div>
    <!-- 对外合作-->
    <div class="content">
-       <h2>对外合作</h2>
+       <h2 id="intro_3">对外合作</h2>
    </div>
-   <div class="container_cop">
-       <div class="box_cop1">
-           <p class="box_cop1-text">2018年7月9日下午，由中国国家发展和改革委员会与德国联邦经济和能源部共同主办的第九届中德经济技术合作论坛在柏林举行。总理李克强与默克尔共同出席第九届中德经济技术合作论坛并发表讲话。国能热源作为清洁供热的中方企业代表，在论坛大会上与德方合作伙伴签署清洁供热战略合作发展协议，全面开展多元清洁能源供热事业，推动可再生能源供热，响应国家节能减排号召，本着开放包容合作共赢的发展战略，引进国际最先进供热设备，以第四代供热技术及多元清洁供热技术为依托，为我国的清洁供热事业发展注入新的活力！</p>
-           <br><br><br><br>
+   <div class="container 2">
+       <div class="box_tech 1">
+           <div class="box_tech_text 1">
+               <p style="font-size: 1.25vw">2018年7月9日下午，由中国国家发展和改革委员会与德国联邦经济和能源部共同主办的第九届中德经济技术合作论坛在柏林举行。总理李克强与默克尔共同出席第九届中德经济技术合作论坛并发表讲话。</p>
+           </div>
+           <div class="box_tech_image 1">
+               <img src="images/交流01.jpg" alt="技术优势图片1" class="box_tech-img">
+               <p style="font-size: 0.83vw">国能热源受邀参加第九届中德经济技术合作论坛</p>
+           </div>
+           <div class="box_tech_image 2">
+                <img src="images/交流02.jpg" alt="技术优势图片2" class="box_tech-img" >
+                <p style="font-size: 0.83vw">国能热源受邀参加第九届中德经济技术合作论坛</p>
+           </div>
        </div>
-       <div class="box_cop2">
-           <div class="box_cop2_up">
-               <div class="box_cop2_up1">
-                   <img src="images/交流01.jpg" alt="技术优势图片1" class="box_cop-img">
-                   <p>国能热源受邀参加第九届中德经济技术合作论坛</p>
-               </div>
-               <div class="box_cop2_up2">
-                    <img src="images/交流02.jpg" alt="技术优势图片2" class="box_cop-img" >
-                    <p>国能热源受邀参加第九届中德经济技术合作论坛</p>
-               </div>
+       <div class="box_tech 2">
+           <div class="box_tech_image 3">
+               <img src="images/交流03.jpg" alt="技术优势图片3" class="box_tech-img">
+               <p style="font-size: 0.83vw">国能热源同德国欧科签署合作协议</p>
            </div>
-           <div class="box_cop2_down">
-               <div class="box_cop2_down1">
-                   <img src="images/交流03.jpg" alt="技术优势图片3" class="box_cop-img">
-                    <p>国能热源同德国欧科签署合作协议</p>
-               </div>
-               <div class="box_cop2_down2">
-                    <img src="images/交流04.jpg" alt="技术优势图片4" class="box_cop-img">
-                    <p>国能热源同德国欧科签署合作协议</p>
-               </div>
+           <div class="box_tech_image 4">
+               <img src="images/交流04.jpg" alt="技术优势图片4" class="box_tech-img">
+               <p style="font-size: 0.83vw">国能热源同德国欧科签署合作协议</p>
            </div>
-        </div>
-    </div>
+           <div class="box_tech_text 2">
+                <p style="font-size: 1.25vw">国能热源作为清洁供热的中方企业代表，在论坛大会上与德方合作伙伴签署清洁供热战略合作发展协议，全面开展多元清洁能源供热事业，推动可再生能源供热，响应国家节能减排号召，本着开放包容合作共赢的发展战略，引进国际最先进供热设备，以第四代供热技术及多元清洁供热技术为依托，为我国的清洁供热事业发展注入新的活力！</p>
+           </div>
+       </div>
+   </div>
 
    <!-- 获奖与专利-->
    <div class="content">
-       <h2>获奖与专利</h2>
+       <h2  id="intro_4">获奖与专利</h2>
    </div>
-   <div class="container_patent">
-       <div class="box_patentup">
-           <div class="box_patentup_left">
-               <p class="box_patentup-text">公司获得中国节能协会节能服务产业委员会颁发的“2018年清洁供暖服务优秀企业”称号；公司投资建设运营的“西安理工高科学院供暖项目”获得2019年“中德能效合作项目奖”。</p>
+   <div class="container 3">
+       <div class="box_tech 5">
+           <div class="box_patent_text 1">
+               <p style="font-size: 1.25vw">公司获得中国节能协会节能服务产业委员会颁发的“2018年清洁供暖服务优秀企业”称号；公司投资建设运营的“西安理工高科学院供暖项目”获得2019年“中德能效合作项目奖”。</p>
            </div>
-           <div class="box_patentup_right">
+           <div class="box_patent_image">
                <img src="images/获奖01.jpg" alt="获奖图片1" class="box_patent-img">
-               <p>获奖描述</p>
+               <p style="font-size: 0.83vw">获奖描述</p>
            </div>
        </div>
-       <div class="box_patentdown">
-           <div class="box_patentdown_left">
+       <div class="box_tech 6">
+           <div class="box_patent_image 2">
                <img src="images/获奖02.jpg" alt="专利图片" class="box_patent-img">
-               <p>专利情况</p>
+               <p style="font-size: 0.83vw">专利情况</p>
            </div>
-           <div class="box_patentdown_right">
-               <p class="box_patentdown-text">公司已申报多项技术专利并研发多项自主知识产权的科技成果：空气源热泵智能节能控制技术、地热资源梯级利用及尾水回灌技术、燃气冷凝锅炉与中深层地热能多能互补清洁供热技术、一种燃气锅炉节能运行系统等。</p>
+           <div class="box_patent_text">
+               <p style="font-size: 1.25vw">公司已申报多项技术专利并研发多项自主知识产权的科技成果：空气源热泵智能节能控制技术、地热资源梯级利用及尾水回灌技术、燃气冷凝锅炉与中深层地热能多能互补清洁供热技术、一种燃气锅炉节能运行系统等。</p>
            </div>
        </div>
    </div>
    <!-- 结束栏 -->
    <div class="container_end01">
        <div class="contact-info">
-           <h3>联系我们</h3>
+           <h3  id="intro_5">联系我们</h3>
            <p>地址 辽宁省大连市甘井子区</p>
            <p>生态科技创新城C4座5楼</p>
            <p>电话(1)：(0411)84910777</p>

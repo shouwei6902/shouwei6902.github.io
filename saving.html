@@ -97,40 +97,7 @@
                 flex-basis: 100%;
             }
         }
-        /*网站尾部*/
-        .container_end01 {
-            background-color: #34495e;
-            color: #ecf0f1;
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .contact-info, .wechat, .system-info {
-            text-align: left;
-        }
-        .contact-info p, .wechat p, .system-info p {
-            margin: 5px 0;
-        }
-        .contact-info p::before, .wechat p::before {
-            content: " ";
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            margin-right: 5px;
-            background-color: #e74c3c;
-        }
-        .system-info a {
-            color: #ecf0f1;
-            text-decoration: none;
-        }
-        .system-info a:hover {
-            text-decoration: underline;
-        }
-        .wechat img {
-            width: 150px;
-            height: 150px;
-        }
+
         /*插入并排图*/
         .pic-box {
             display: flex;
@@ -148,24 +115,6 @@
             background-color: lightblue; /* 可选，设置背景颜色以便查看效果 */
             text-align: center; /* 可选，使内容在 div 中居中 */
         }
-        /*返回首页按钮*/
-        .back-home-button {
-            position: absolute;
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: left;
-            margin-left: 50%; /* 确保没有左外边距 */
-        }
-        .back-home-button:hover {
-            background-color: #0056b3;
-        }
-
     </style>
 </head>
 <body>
@@ -173,9 +122,9 @@
         <header>
             <h1>企业节能服务介绍</h1>
             <p>专注于工业节能与能源优化的技术服务商，提供高效、可靠的节能解决方案</p>
+            <br>
+            <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
         </header>
-        <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
-
         <div class="section">
             <h2>工业节能服务</h2>
             <p>我们是一家专注于工业节能与能源优化的技术服务商，致力于为企业提供高效、可靠的节能解决方案。凭借先进的技术和丰富的行业经验，我们帮助客户降低能源消耗、减少碳排放、提升经济效益，助力企业实现绿色可持续发展。</p>

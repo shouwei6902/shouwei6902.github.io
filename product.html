@@ -86,40 +86,7 @@
                 flex-basis: 100%;
             }
         }
-        /*网站尾部*/
-        .container_end01 {
-            background-color: #34495e;
-            color: #ecf0f1;
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .contact-info, .wechat, .system-info {
-            text-align: left;
-        }
-        .contact-info p, .wechat p, .system-info p {
-            margin: 5px 0;
-        }
-        .contact-info p::before, .wechat p::before {
-            content: " ";
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            margin-right: 5px;
-            background-color: #e74c3c;
-        }
-        .system-info a {
-            color: #ecf0f1;
-            text-decoration: none;
-        }
-        .system-info a:hover {
-            text-decoration: underline;
-        }
-        .wechat img {
-            width: 150px;
-            height: 150px;
-        }
+
         /*插入并排图*/
         .pic-box {
             display: flex;
@@ -137,23 +104,7 @@
             background-color: lightblue; /* 可选，设置背景颜色以便查看效果 */
             text-align: center; /* 可选，使内容在 div 中居中 */
         }
-        /*返回首页按钮*/
-        .back-home-button {
-            position: absolute;
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: left;
-            margin-left: 50%; /* 确保没有左外边距 */
-        }
-        .back-home-button:hover {
-            background-color: #0056b3;
-        }
+
     </style>
 </head>
 <body>
@@ -161,11 +112,11 @@
         <header>
             <h1>智慧供热产品介绍</h1>
             <p>专业提供气候补偿、分时分区、水力平衡等“云平台”解决方案</p>
+            <br>
+            <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
         </header>
-        <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
-
         <div class="section">
-            <h2>智慧供热产品概述</h2>
+            <h2 id="text_container">智慧供热产品概述</h2>
             <p>随着我国供热行业向智能化、低碳化发展转型，智慧供热成为提升供热效率、降低能耗和改善用户满意度的重要手段。本介绍材料将详细介绍适用于不同规模供热场景的智慧供热产品，包括大型区域性供热的PLC及二网智能变频调控柜、分散式小规模供热的控制箱，以及用于智能调整一、二网水力平衡的阀门和控制系统。</p>
         </div>
 
@@ -294,6 +245,7 @@
         function goToHomePage() {
             window.location.href = "index.html"; // 将"index.html"替换为你的首页URL
         }
+
     </script>
     <script src="script.js"></script>
 </body>

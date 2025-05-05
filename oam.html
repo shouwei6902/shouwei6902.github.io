@@ -92,12 +92,6 @@
             margin-bottom: 20px;
             border-radius: 5px;
         }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            color: #666;
-        }
 
         @media (max-width: 768px) {
             .feature-box {
@@ -155,23 +149,7 @@
             background-color: lightblue; /* 可选，设置背景颜色以便查看效果 */
             text-align: center; /* 可选，使内容在 div 中居中 */
         }
-        /*返回首页按钮*/
-        .back-home-button {
-            position: absolute;
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: left;
-            margin-left: 50%; /* 确保没有左外边距 */
-        }
-        .back-home-button:hover {
-            background-color: #0056b3;
-        }
+
     </style>
 </head>
 <body>
@@ -179,9 +157,9 @@
         <header>
             <h1>新能源运维服务</h1>
             <p>专注于为企业提供高效、安全、节能的运维解决方案</p>
+            <br>
+            <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
         </header>
-        <button class="back-home-button" onclick="goToHomePage()">返回首页</button>
-
         <div class="section">
             <!--<h2>一、大型区域性供热PLC及二网智能变频调控柜</h2>-->
             <h2><img src="icon/core.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">一、运维服务内容</h2>
@@ -335,12 +313,6 @@
 
                 <div class="feature-box">
                     <h3><img src="icon/rebeng.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">某食品厂热泵供热系统升级</h3>
-                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">利用80℃废水余热为生产线供热</p>
-                    <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">综合节能40%，投资回收期<2年</p>
-                </div>
-
-                <div class="feature-box">
-                    <h3><img src="icon/temp.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">某食品厂热泵供热系统升级</h3>
                     <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">利用80℃废水余热为生产线供热</p>
                     <p><img src="icon/true.png" alt="product" style="width:32px; vertical-align: middle; margin-right: 5px;">综合节能40%，投资回收期<2年</p>
                 </div>

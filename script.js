@@ -26,30 +26,6 @@ document.addEventListener('contextmenu', function (e) {
 });
 
 
-//about as
-document.addEventListener('DOMContentLoaded', function() {
-    const moreBtn = document.querySelector('.more-btn');
-    moreBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        // Add your logic here for the "MORE" button click
-        alert('More information will be displayed here!');
-    });
-});
-
-
-// 导航栏交互
-
-document.querySelectorAll('.dropdown li').forEach(item => {
-    item.addEventListener('click', function() {
-        // 根据点击的菜单项更新内容区域
-        const contentTitle = this.textContent;
-        const contentDiv = document.querySelector('.content');
-        contentDiv.innerHTML = `
-            <h2>${contentTitle}</h2>
-            <p>${contentTitle}的详细内容...</p>
-        `;
-    });
-});
 // 获取下拉菜单元素
 const selector = document.getElementById('.dropdown li');
 selector.addEventListener('change', function () {

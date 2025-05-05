@@ -1,18 +1,14 @@
-/*基础样式*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* 流式基础 */
+body { margin:0; font-size:16px; }
+.container { width:90%; margin:0 auto; }
 /* 导航栏样式 */
 .navbar {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background: #fff;
+    padding:1rem 2rem;
+    background: #efeeee;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 999;
 }
@@ -23,6 +19,7 @@
 
 .nav-items {
     display: flex;
+    margin-right: 4.5vw;
     gap: 40px;
 
 }
@@ -37,7 +34,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: #fff;
+    background: #efeeee;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     display: none;
     min-width: 160px;
@@ -54,7 +51,7 @@
     color: #f68c1c;
 }
 .dropdown li {
-    padding: 10px 20px;
+    padding:0.5rem 0.5rem;
     border-bottom: 1px solid #eee;
 }
 .dropdown li:hover {
@@ -64,14 +61,15 @@
 /* 轮播图样式 */
 .carousel {
     display: flex;
-    height: 500px;
+    justify-content: space-between;
+    align-items: center;
     overflow: hidden;
     z-index: 1;
 }
 
 .carousel-img {
-    width: 100%;
-    height: 100%;
+    width:100%;
+    height: auto;
     object-fit: cover;
     display: none;
 }
@@ -84,22 +82,22 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 40px;
+    font-size: 2.1vw;
     cursor: pointer;
     color: #fff;
     background: rgba(0,0,0,0.3);
-    padding: 10px 20px;
+    padding: 0.5rem 1.5rem;
 }
 
-.arrow.left { left: 20px; }
-.arrow.right { right: 20px; }
+.arrow.left { left: 1.5rem; }
+.arrow.right { right: 1.5rem; }
 
 /*产品服务标题*/
 .content{
-    padding: 20px 10%;
+    padding: 1em 10%;
     line-height: 1.8;
     background: #f8f9fa;
-    min-height: 100px;
+    min-height: 6rem;
 }
 .content h2 {
     color: #2c3e50;
@@ -113,19 +111,19 @@
     flex-direction: row; /* 水平排列子元素 */
     align-items: center;
     justify-content: center; /* 水平居中 */
-    background: rgba(255, 255, 255, 0.9);
-    margin: 10px;
-    padding: 10px;
+    background: rgb(239, 238, 238);
+    margin: 0.5rem;
+    padding: 0.5rem;
     gap:25px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 /*为产品服务容器设定BOX区域*/
 .box {
-    left:20px;
-    padding: 10px;
+    left:1rem;
+    padding: 1rem;
     width: 20%;
-    margin: 25px; /* 可选，添加一些外边距以便分隔 */
+    margin: 1.5rem; /* 可选，添加一些外边距以便分隔 */
     background-color: lightblue; /* 可选，设置背景颜色以便查看效果 */
     text-align: center; /* 可选，使内容在 div 中居中 */
 }
@@ -135,149 +133,41 @@
     text-align: center;
     display: flex;
     flex-direction: column; /* 垂直排列子元素 */
-    margin: 15px; /* 可选，添加一些外边距以便分隔 */
-    padding: 10px;
+    margin: 1rem; /* 可选，添加一些外边距以便分隔 */
+    padding: 0.5rem;
 }
 
-.interactive-image01 {
-    width: 300px;
+.interactive-image {
+    width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
 
-.interactive-text01_1 {
-    width: 300px;
-    font-size: 18px; /* 文字大小 */
+.interactive-text01 {
+    font-size: 1.2vw; /* 文字大小 */
+    width: 100%;
     color: black;
     transition: color 0.3s ease;
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
 }
 
-.interactive-text01_2 {
-    font-size: 14px; /* 文字大小 */
-    width: 300px;
+.interactive-text02 {
+    font-size: 1vw; /* 文字大小 */
+    width: 100%;
     color: black;
     transition: color 0.3s ease;
-    margin-top: 20px;
+    margin-top: 1.2rem;
 }
 
-.interactive-area:hover .interactive-image01 {
+.interactive-area:hover .interactive-image {
     transform: scale(1.1);
 }
 
-.interactive-area:hover .interactive-text01_1 {
+.interactive-area:hover .interactive-text01 {
     color: #f68c1c;
 }
 
-.interactive-area:hover .interactive-text01_2 {
-    color: #f68c1c;
-}
-/*产品服务-2*/
-.interactive-image02 {
-    width: 300px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.interactive-text02_1 {
-    font-size: 18px; /* 文字大小 */
-    width: 300px;
-    z-index: 1;
-    color: black;
-    transition: color 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.interactive-text02_2 {
-    font-size: 14px; /* 文字大小 */
-    width: 300px;
-    z-index: 2;
-    color: black;
-    transition: color 0.3s ease;
-    margin-top: 20px;
-}
-
-.interactive-area:hover .interactive-image02 {
-    transform: scale(1.1);
-}
-
-.interactive-area:hover .interactive-text02_1 {
-    color: #f68c1c;
-}
-
-.interactive-area:hover .interactive-text02_2 {
-    color: #f68c1c;
-}
-/*产品服务-3*/
-.interactive-image03 {
-    width: 300px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.interactive-text03_1 {
-    font-size: 18px; /* 文字大小 */
-    width: 300px;
-    z-index: 1;
-    color: black;
-    transition: color 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.interactive-text03_2 {
-    font-size: 14px; /* 文字大小 */
-    width: 300px;
-    z-index: 2;
-    color: black;
-    transition: color 0.3s ease;
-    margin-top: 20px;
-}
-
-.interactive-area:hover .interactive-image03 {
-    transform: scale(1.1);
-}
-
-.interactive-area:hover .interactive-text03_1 {
-    color: #f68c1c;
-}
-
-.interactive-area:hover .interactive-text03_2 {
-    color: #f68c1c;
-}
-/*产品服务-4*/
-.interactive-image04 {
-    width: 300px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.interactive-text04_1 {
-    font-size: 18px; /* 文字大小 */
-    width: 300px;
-    z-index: 1;
-    color: black;
-    transition: color 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.interactive-text04_2 {
-    font-size: 14px; /* 文字大小 */
-    width: 300px;
-    z-index: 2;
-    color: black;
-    transition: color 0.3s ease;
-    margin-top: 20px;
-}
-
-.interactive-area:hover .interactive-image04 {
-    transform: scale(1.1);
-}
-
-.interactive-area:hover .interactive-text04_1 {
-    color: #f68c1c;
-}
-
-.interactive-area:hover .interactive-text04_2 {
+.interactive-area:hover .interactive-text02 {
     color: #f68c1c;
 }
 
@@ -285,31 +175,33 @@
 .content01 {
     position: relative;
     align-items: center;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgb(239, 238, 238);
     margin: 0;
     padding: 0;
-    border-radius: 10px;
+    border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 
 .content01 img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover; /* 或者使用 contain, fill, none 等 */
+    z-index: 2;
 }
 
 .about_text {
     position: absolute; /* 或者使用相对定位，取决于具体布局需求 */
     display: flex;
     color: white; /* 文字颜色 */
-    font-size: 28px; /* 文字大小 */
+    font-size: 1.5vw; /* 文字大小 */
+    line-height: 3.0vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1000px; /* 根据需要调整 */
-    height: 300px; /* 根据需要调整 */
-    z-index: 1;
+    width: 80%; /* 根据需要调整 */
+    height: 30%; /* 根据需要调整 */
+    z-index: 3;
 }
 
 .more-btn {
@@ -318,13 +210,13 @@
     left: 50%; /* 向右偏移50px */
     top: 70%; /* 向下偏移20px */
     transform: translate(-50%, -50%);
-    padding: 10px 20px;
+    padding: 1rem 1.5rem;
     background: #f0ad4e;
     color: white;
     text-decoration: none;
     border-radius: 3px;
     transition: background 0.3s;
-    z-index: 2;
+    z-index: 4;
 }
 
 .more-btn:hover {
@@ -332,60 +224,47 @@
 }
 
 /*成功案例*/
-.container_cases1 {
+.container_cases {
     display: flex;
     flex-direction: row; /* 水平排列子元素 */
     align-items: center;
     justify-content: center; /* 水平居中 */
-    background: rgba(255, 255, 255, 0.9);
-    margin: 10px;
-    padding: 10px;
-    gap:25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.container_cases2 {
-    display: flex;
-    flex-direction: row; /* 水平排列子元素 */
-    align-items: center;
-    justify-content: center; /* 水平居中 */
-    background: rgba(255, 255, 255, 0.9);
-    margin: 10px;
-    padding: 10px;
-    gap:25px;
-    border-radius: 10px;
+    background: rgb(239, 238, 238);
+    margin: 1rem;
+    padding: 1rem;
+    gap:1.5rem;
+    border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/*成功案例-1*/
 .interactive-case {
     text-align: center;
     display: flex;
     flex-direction: column; /* 垂直排列子元素 */
-    margin: 15px; /* 可选，添加一些外边距以便分隔 */
-    padding: 10px;
+    margin: 1rem; /* 可选，添加一些外边距以便分隔 */
+    padding: 1rem;
 }
 
 .interactive-case-image {
-    width: 300px;
+    width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
 
 .interactive-case-text01 {
-    width: 300px;
-    font-size: 18px; /* 文字大小 */
+    width: 100%;
+    font-size: 1.2vw; /* 文字大小 */
     color: black;
     transition: color 0.3s ease;
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
 }
 
 .interactive-case-text02 {
-    font-size: 14px; /* 文字大小 */
-    width: 300px;
+    font-size: 1.0vw; /* 文字大小 */
+    width: 100%;
     color: black;
     transition: color 0.3s ease;
-    margin-top: 20px;
+    margin-top: 1.2rem;
 }
 
 .interactive-case:hover .interactive-case-image {
@@ -399,7 +278,23 @@
 .interactive-case:hover .interactive-case-text02 {
     color: #f68c1c;
 }
-
+/*返回首页按钮*/
+.back-home-button {
+    /*display: inline-block;*/
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    bottom: 0; /* 确保没有左外边距 */
+    z-index: 999;
+}
+.back-home-button:hover {
+    background-color: #0056b3;
+}
 /*网站尾部*/
 .container_end01 {
     background-color: #34495e;
@@ -434,409 +329,9 @@
     width: 150px;
     height: 150px;
 }
-
-/*介绍页-公司介绍*/
-.content01 {
-    display: flex;
-    overflow: hidden;
-    z-index: 1;
-}
-.content01 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-.intro_text {
-    position: absolute; /* 或者使用相对定位，取决于具体布局需求
-    /*display: flex;*/
-    color: white; /* 文字颜色 */
-    font-size: 28px; /* 文字大小 */
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px; /* 根据需要调整 */
-    height: 300px; /* 根据需要调整 */
-    z-index: 2;
-}
-/*返回首页按钮*/
-.container_intro {
-    display: flex;
-    flex-direction: row; /* 水平排列子元素 */
-    align-items: center;
-    justify-content: center; /* 水平居中 */
-    background: rgba(255, 255, 255, 0.9);
-    margin: 10px;
-    padding: 10px;
-    gap:25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.box_intro1 {
-    left:5px;
-    padding: 5px;
-    width: 50%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_intro2 {
-    left:5px;
-    padding: 5px;
-    width: 30%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-
-.box_intro2.right {
+footer {
     text-align: center;
-    display: flex;
-    flex-direction: column; /* 垂直排列子元素 */
-    margin: 15px; /* 可选，添加一些外边距以便分隔 */
-    padding: 10px;
-}
-
-.box_intro2-img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.box_intro1-text {
-    width: 100%;
-    font-size: 24px; /* 文字大小 */
-    text-align: left;
-    color: black;
-    transition: color 0.3s ease;
-    margin-bottom: 20px;
-}
-
-/*介绍页-技术优势*/
-.container_tech {
-    display: flex;
-    flex-direction: row; /* 水平排列子元素 */
-    align-items: center;
-    justify-content: center; /* 水平居中 */
-    background: rgba(255, 255, 255, 0.9);
-    margin: 10px;
-    padding: 10px;
-    gap:25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.box_tech1 {
-    display: flex;
-    flex-direction: column;
-    left:5px;
-    padding: 5px;
-    width: 35%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-
-.right_up{
-    left:5px;
-    padding: 5px;
-    width: 100%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.right_down{
-    left:5px;
-    padding: 5px;
-    width: 100%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.right_up-text {
-    width: 100%;
-    font-size: 24px; /* 文字大小 */
-    color: black;
-    transition: color 0.3s ease;
-    margin-bottom: 20px;
-    text-align: left; /* 可选，使内容在 div 中居中 */
-}
-.right_down-text {
-    width: 100%;
-    font-size: 24px; /* 文字大小 */
-    text-align: left;
-    color: black;
-    transition: color 0.3s ease;
-    margin-bottom: 20px;
-}
-.box_tech2 {
-    display: flex;
-    flex-direction: column; /* 水平排列子元素 */
-    left:5px;
-    padding: 5px;
-    width: 35%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_tech2_up {
-    display: flex;
-    flex-direction: row; /* 水平排列子元素 */
-    left:5px;
-    padding: 5px;
-    width: 100%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_tech2_up1 {
-    left:5px;
-    padding: 5px;
-    width: 50%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_tech2_up2 {
-    left:5px;
-    padding: 5px;
-    width: 50%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_tech2_down {
-    display: flex;
-    flex-direction: row; /* 水平排列子元素 */
-    left:5px;
-    padding: 5px;
-    width: 100%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_tech2_down1 {
-    left:5px;
-    padding: 5px;
-    width: 50%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_tech2_down2 {
-    left:5px;
-    padding: 5px;
-    width: 50%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-
-.box_tech-img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-/*介绍页-合作交流*/
-.container_cop {
-    display: flex;
-    flex-direction: row; /* 水平排列子元素 */
-    align-items: center;
-    justify-content: center; /* 水平居中 */
-    background: rgba(255, 255, 255, 0.9);
-    margin: 10px;
-    padding: 10px;
-    gap:25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.box_cop1 {
-    left:5px;
-    padding: 5px;
-    width: 35%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_cop1-text {
-    width: 100%;
-    font-size: 24px; /* 文字大小 */
-    line-height: 48px;
-    text-align: left;
-    color: black;
-    transition: color 0.3s ease;
-    margin-bottom: 20px;
-}
-.box_cop2 {
-    display: flex;
-    flex-direction: column; /* 水平排列子元素 */
-    left:5px;
-    padding: 5px;
-    width: 35%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_cop2_up {
-    display: flex;
-    flex-direction: row; /* 水平排列子元素 */
-    left:5px;
-    padding: 5px;
-    width: 100%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_cop2_up1 {
-    left:5px;
-    padding: 5px;
-    width: 50%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_cop2_up2 {
-    left:5px;
-    padding: 5px;
-    width: 50%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_cop2_down {
-    display: flex;
-    flex-direction: row; /* 水平排列子元素 */
-    left:5px;
-    padding: 5px;
-    width: 100%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_cop2_down1 {
-    left:5px;
-    padding: 5px;
-    width: 50%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_cop2_down2 {
-    left:5px;
-    padding: 5px;
-    width: 50%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-
-.box_cop-img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-/*介绍页-获奖专利*/
-.container_patent {
-    display: flex;
-    flex-direction: column; /* 水平排列子元素 */
-    align-items: center;
-    justify-content: center; /* 水平居中 */
-    background: rgba(255, 255, 255, 0.9);
-    margin: 10px;
-    padding: 10px;
-    gap:25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.box_patentup {
-    display: flex;
-    flex-direction: row; /* 水平排列子元素 */
-    left:5px;
-    padding: 5px;
-    width: 70%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_patentdown {
-    display: flex;
-    flex-direction: row; /* 水平排列子元素 */
-    left:5px;
-    padding: 5px;
-    width: 70%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_patentup_left{
-    left:5px;
-    padding: 5px;
-    width: 35%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_patentup_right{
-    left:5px;
-    padding: 5px;
-    width: 35%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_patentdown_left{
-    left:5px;
-    padding: 5px;
-    width: 35%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_patentdown_right{
-    left:5px;
-    padding: 5px;
-    width: 35%;
-    margin: 5px; /* 可选，添加一些外边距以便分隔 */
-    background-color: #ffffff; /* 可选，设置背景颜色以便查看效果 */
-    text-align: center; /* 可选，使内容在 div 中居中 */
-}
-.box_patentup-text {
-    font-size: 24px; /* 文字大小 */
-    text-align: left;
-    color: black;
-    transition: color 0.3s ease;
-    margin-bottom: 20px;
-}
-.box_patentdown-text {
-    font-size: 24px; /* 文字大小 */
-    text-align: left;
-    color: black;
-    transition: color 0.3s ease;
-    margin-bottom: 20px;
-}
-.box_patent-img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-/*返回首页按钮*/
-.back-home-button {
-    position: absolute;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: left;
-    margin-left: 50%; /* 确保没有左外边距 */
-}
-.back-home-button:hover {
-    background-color: #0056b3;
+    margin-top: 30px;
+    padding: 20px;
+    color: #666;
 }
